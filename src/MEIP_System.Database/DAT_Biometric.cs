@@ -90,24 +90,26 @@ namespace MEIP_System
             SqlDataAdapter da;
             DataTable today = new DataTable();
 
+            int weekend = 0;
+
+            if (DateTime.Now.DayOfWeek == DayOfWeek.Saturday)
+            {
+                weekend = -1;
+            }
+            else if (DateTime.Now.DayOfWeek == DayOfWeek.Sunday)
+            {
+                weekend = -2;
+            }
+            else if (DateTime.Now.DayOfWeek == DayOfWeek.Monday)
+            {
+                weekend = -3;
+            }
+
             if (userStatus == "In")
             {
                 #region AWOL
                 #region WEEKEND
-                int weekend = 0;
 
-                if (DateTime.Now.DayOfWeek == DayOfWeek.Saturday)
-                {
-                    weekend = -1;
-                }
-                else if (DateTime.Now.DayOfWeek == DayOfWeek.Sunday)
-                {
-                    weekend = -2;
-                }
-                else if (DateTime.Now.DayOfWeek == DayOfWeek.Monday)
-                {
-                    weekend = -3;
-                }
                 #endregion
 
                 //Checks the weekend
@@ -130,7 +132,7 @@ namespace MEIP_System
                 }
                 #endregion
                 //Checks if there is an existing late record
-                da = new SqlDataAdapter("select * from tblAttendance where (DATEPART(yy, TimeIn) = '" + DateTime.Now.Year + "' AND DATEPART(mm, TimeIn) = '" + DateTime.Now.Month + "'AND DATEPART(dd, TimeIn) = '" + DateTime.Now.Day + "') AND UserID = " + userID + " AND Late = 1", cs);
+                da = new SqlDataAdapter("select * from tblAttendance where (DATEPART(yy, TimeIn) = '" + DateTime.Now.Year + "' AND DATEPART(mm, TimeIn) = '" + DateTime.Now.Month + "'AND DATEPART(dd, TimeIn) = '" + DateTime.Now.Day + "') AND UserID = " + userID + " AND AWOL = 1", cs);
                 da.Fill(today);
                 //DateTime late = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 9, 0, 0);
                 if (today.Rows.Count == 0)
@@ -150,6 +152,15 @@ namespace MEIP_System
             }
             else
             {
+                DateTime day = DateTime.Now.AddDays(weekend);
+                da = new SqlDataAdapter("select TimeOut from tblAttendance where '" + day.Day + " " + DateTime.Now.ToString("MMM") + " " + DateTime.Now.Year + "' <= TimeIn AND TimeIn < '" + DateTime.Now.Day + " " + DateTime.Now.ToString("MMM") + " " + DateTime.Now.Year + "' AND UserID = " + userID + " ORDER BY TimeOut ASC", cs);
+                da.Fill(dt);
+                if (dt.Rows.Count != 0 && dt.Rows[0][0] != null)
+                {
+                    da = new SqlDataAdapter("UPDATE tblUsers set UserStatus = 'Out' WHERE UserID = '" + userID + "'", cs);
+                    da.Fill(dt);
+                    InsertAttendance(userID, "In");
+                }
                 da = new SqlDataAdapter("UPDATE tblAttendance set TimeOut = GETDATE() where AttendanceID = (SELECT MAX(AttendanceID) from tblAttendance where UserID = '" + userID + "')", cs);
                 
                 //DateTime undertime = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 18, 0, 0);
