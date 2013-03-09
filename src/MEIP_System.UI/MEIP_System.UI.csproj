@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CE699CBC-71AF-4327-AC57-CDE936999480}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MEIP_System.UI</RootNamespace>
+    <AssemblyName>MEIP_System.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CSS\Style.css" />
+    <Content Include="EmployeeSelfService\EmployeeSelf_EmployeeLeaveRequest.aspx" />
+    <Content Include="EmployeeSelfService\EmployeeSelf_GMVerifyRequest.aspx" />
+    <Content Include="Employee\Employee_AddWorkExperience.aspx" />
+    <Content Include="Employee\Employee_Home.aspx" />
+    <Content Include="Employee\Employee_UpdateContactInfo.aspx" />
+    <Content Include="Employee\Employee_UpdateEducInfo.aspx" />
+    <Content Include="Employee\Employee_ViewContactInfo.aspx" />
+    <Content Include="Employee\Employee_ViewEducInfo.aspx" />
+    <Content Include="Employee\Employee_ViewFamilyInfo.aspx" />
+    <Content Include="Employee\Employee_ViewGovtInfo.aspx" />
+    <Content Include="Employee\Employee_ViewWorkExperience.aspx" />
+    <Content Include="GeneralManager\GM_AddUsers.aspx" />
+    <Content Include="GeneralManager\GM_DeactivateAccount.aspx" />
+    <Content Include="GeneralManager\GM_Home.aspx" />
+    <Content Include="GeneralManager\GM_SearchEmployees.aspx" />
+    <Content Include="GeneralManager\GM_UpdateContactInfo.aspx" />
+    <Content Include="GeneralManager\GM_UpdateEducInfo.aspx" />
+    <Content Include="GeneralManager\GM_ViewAuditTrail.aspx" />
+    <Content Include="GeneralManager\GM_ViewCompanyInfo.aspx" />
+    <Content Include="GeneralManager\GM_ViewContactInfo.aspx" />
+    <Content Include="GeneralManager\GM_ViewEducInfo.aspx" />
+    <Content Include="GeneralManager\GM_ViewFamilyInfo.aspx" />
+    <Content Include="GeneralManager\GM_ViewGovtInfo.aspx" />
+    <Content Include="GeneralManager\GM_ViewWorkExperience.aspx" />
+    <Content Include="Images\bg1.jpg" />
+    <Content Include="Images\bg6.jpg" />
+    <Content Include="Images\bgOFF1.gif" />
+    <Content Include="Images\contacts.png" />
+    <Content Include="Images\Education.png" />
+    <Content Include="Images\Father.ico" />
+    <Content Include="Images\grd_alt.png" />
+    <Content Include="Images\grd_head.png" />
+    <Content Include="Images\grd_pgr.png" />
+    <Content Include="Images\header_logo.jpg" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\Mother.ico" />
+    <Content Include="Images\navigation.png" />
+    <Content Include="Images\Profile.ico" />
+    <Content Include="Images\siblings.ico" />
+    <Content Include="Images\WorkArea-BG.png" />
+    <Content Include="Images\workexperience.png" />
+    <Content Include="Login.aspx" />
+    <Content Include="Timekeeping\Timekeeping_AddTask.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EmployeeSelfService\EmployeeSelf_EmployeeLeaveRequest.aspx.cs">
+      <DependentUpon>EmployeeSelf_EmployeeLeaveRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmployeeSelfService\EmployeeSelf_EmployeeLeaveRequest.aspx.designer.cs">
+      <DependentUpon>EmployeeSelf_EmployeeLeaveRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeSelfService\EmployeeSelf_GMVerifyRequest.aspx.cs">
+      <DependentUpon>EmployeeSelf_GMVerifyRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmployeeSelfService\EmployeeSelf_GMVerifyRequest.aspx.designer.cs">
+      <DependentUpon>EmployeeSelf_GMVerifyRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\Employee_AddWorkExperience.aspx.cs">
+      <DependentUpon>Employee_AddWorkExperience.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Employee\Employee_AddWorkExperience.aspx.designer.cs">
+      <DependentUpon>Employee_AddWorkExperience.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\Employee_Home.aspx.cs">
+      <DependentUpon>Employee_Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Employee\Employee_Home.aspx.designer.cs">
+      <DependentUpon>Employee_Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\Employee_UpdateContactInfo.aspx.cs">
+      <DependentUpon>Employee_UpdateContactInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Employee\Employee_UpdateContactInfo.aspx.designer.cs">
+      <DependentUpon>Employee_UpdateContactInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\Employee_UpdateEducInfo.aspx.cs">
+      <DependentUpon>Employee_UpdateEducInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Employee\Employee_UpdateEducInfo.aspx.designer.cs">
+      <DependentUpon>Employee_UpdateEducInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\Employee_ViewContactInfo.aspx.cs">
+      <DependentUpon>Employee_ViewContactInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Employee\Employee_ViewContactInfo.aspx.designer.cs">
+      <DependentUpon>Employee_ViewContactInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\Employee_ViewEducInfo.aspx.cs">
+      <DependentUpon>Employee_ViewEducInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Employee\Employee_ViewEducInfo.aspx.designer.cs">
+      <DependentUpon>Employee_ViewEducInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\Employee_ViewFamilyInfo.aspx.cs">
+      <DependentUpon>Employee_ViewFamilyInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Employee\Employee_ViewFamilyInfo.aspx.designer.cs">
+      <DependentUpon>Employee_ViewFamilyInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\Employee_ViewGovtInfo.aspx.cs">
+      <DependentUpon>Employee_ViewGovtInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Employee\Employee_ViewGovtInfo.aspx.designer.cs">
+      <DependentUpon>Employee_ViewGovtInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\Employee_ViewWorkExperience.aspx.cs">
+      <DependentUpon>Employee_ViewWorkExperience.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Employee\Employee_ViewWorkExperience.aspx.designer.cs">
+      <DependentUpon>Employee_ViewWorkExperience.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralManager\GM_AddUsers.aspx.cs">
+      <DependentUpon>GM_AddUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GeneralManager\GM_AddUsers.aspx.designer.cs">
+      <DependentUpon>GM_AddUsers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralManager\GM_DeactivateAccount.aspx.cs">
+      <DependentUpon>GM_DeactivateAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GeneralManager\GM_DeactivateAccount.aspx.designer.cs">
+      <DependentUpon>GM_DeactivateAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralManager\GM_Home.aspx.cs">
+      <DependentUpon>GM_Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GeneralManager\GM_Home.aspx.designer.cs">
+      <DependentUpon>GM_Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralManager\GM_SearchEmployees.aspx.cs">
+      <DependentUpon>GM_SearchEmployees.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GeneralManager\GM_SearchEmployees.aspx.designer.cs">
+      <DependentUpon>GM_SearchEmployees.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralManager\GM_UpdateContactInfo.aspx.cs">
+      <DependentUpon>GM_UpdateContactInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GeneralManager\GM_UpdateContactInfo.aspx.designer.cs">
+      <DependentUpon>GM_UpdateContactInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralManager\GM_UpdateEducInfo.aspx.cs">
+      <DependentUpon>GM_UpdateEducInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GeneralManager\GM_UpdateEducInfo.aspx.designer.cs">
+      <DependentUpon>GM_UpdateEducInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralManager\GM_ViewAuditTrail.aspx.cs">
+      <DependentUpon>GM_ViewAuditTrail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GeneralManager\GM_ViewAuditTrail.aspx.designer.cs">
+      <DependentUpon>GM_ViewAuditTrail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralManager\GM_ViewCompanyInfo.aspx.cs">
+      <DependentUpon>GM_ViewCompanyInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GeneralManager\GM_ViewCompanyInfo.aspx.designer.cs">
+      <DependentUpon>GM_ViewCompanyInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralManager\GM_ViewContactInfo.aspx.cs">
+      <DependentUpon>GM_ViewContactInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GeneralManager\GM_ViewContactInfo.aspx.designer.cs">
+      <DependentUpon>GM_ViewContactInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralManager\GM_ViewEducInfo.aspx.cs">
+      <DependentUpon>GM_ViewEducInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GeneralManager\GM_ViewEducInfo.aspx.designer.cs">
+      <DependentUpon>GM_ViewEducInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralManager\GM_ViewFamilyInfo.aspx.cs">
+      <DependentUpon>GM_ViewFamilyInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GeneralManager\GM_ViewFamilyInfo.aspx.designer.cs">
+      <DependentUpon>GM_ViewFamilyInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralManager\GM_ViewGovtInfo.aspx.cs">
+      <DependentUpon>GM_ViewGovtInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GeneralManager\GM_ViewGovtInfo.aspx.designer.cs">
+      <DependentUpon>GM_ViewGovtInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralManager\GM_ViewWorkExperience.aspx.cs">
+      <DependentUpon>GM_ViewWorkExperience.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GeneralManager\GM_ViewWorkExperience.aspx.designer.cs">
+      <DependentUpon>GM_ViewWorkExperience.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Timekeeping\Timekeeping_AddTask.aspx.cs">
+      <DependentUpon>Timekeeping_AddTask.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Timekeeping\Timekeeping_AddTask.aspx.designer.cs">
+      <DependentUpon>Timekeeping_AddTask.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SystemAdmin\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MEIP_System.BusinessLogic\MEIP_System.BusinessLogic.csproj">
+      <Project>{46C70F21-1907-446B-87B5-2BCDA30F86FE}</Project>
+      <Name>MEIP_System.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MEIP_System.Database\MEIP_System.Database.csproj">
+      <Project>{BBADC677-EE1F-4A2F-A012-E08E7E8E38A9}</Project>
+      <Name>MEIP_System.Database</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1931</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

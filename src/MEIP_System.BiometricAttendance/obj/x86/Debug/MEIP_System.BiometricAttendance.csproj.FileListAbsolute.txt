@@ -1,0 +1,38 @@
+\\vmware-host\Shared Folders\Desktop\MEIP_System\bin\Debug\MEIP_System.BiometricAttendance.exe
+\\vmware-host\Shared Folders\Desktop\MEIP_System\bin\Debug\MEIP_System.BiometricAttendance.pdb
+\\vmware-host\Shared Folders\Desktop\MEIP_System\src\MEIP_System.BiometricAttendance\obj\x86\Debug\ResolveAssemblyReference.cache
+\\vmware-host\Shared Folders\Desktop\MEIP_System\src\MEIP_System.BiometricAttendance\obj\x86\Debug\MEIP_System.BiometricAttendance.Form1.resources
+\\vmware-host\Shared Folders\Desktop\MEIP_System\src\MEIP_System.BiometricAttendance\obj\x86\Debug\MEIP_System.BiometricAttendance.Properties.Resources.resources
+\\vmware-host\Shared Folders\Desktop\MEIP_System\src\MEIP_System.BiometricAttendance\obj\x86\Debug\GenerateResource.read.1.tlog
+\\vmware-host\Shared Folders\Desktop\MEIP_System\src\MEIP_System.BiometricAttendance\obj\x86\Debug\GenerateResource.write.1.tlog
+\\vmware-host\Shared Folders\Desktop\MEIP_System\src\MEIP_System.BiometricAttendance\obj\x86\Debug\MEIP_System.BiometricAttendance.exe
+\\vmware-host\Shared Folders\Desktop\MEIP_System\src\MEIP_System.BiometricAttendance\obj\x86\Debug\MEIP_System.BiometricAttendance.pdb
+C:\MEIP_System\bin\Debug\MEIP_System.BiometricAttendance.exe
+C:\MEIP_System\bin\Debug\MEIP_System.BiometricAttendance.pdb
+C:\MEIP_System\src\MEIP_System.BiometricAttendance\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\MEIP_System\src\MEIP_System.BiometricAttendance\obj\x86\Debug\MEIP_System.BiometricAttendance.Form1.resources
+C:\MEIP_System\src\MEIP_System.BiometricAttendance\obj\x86\Debug\MEIP_System.BiometricAttendance.Properties.Resources.resources
+C:\MEIP_System\src\MEIP_System.BiometricAttendance\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\MEIP_System\src\MEIP_System.BiometricAttendance\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\MEIP_System\src\MEIP_System.BiometricAttendance\obj\x86\Debug\MEIP_System.BiometricAttendance.exe
+C:\MEIP_System\src\MEIP_System.BiometricAttendance\obj\x86\Debug\MEIP_System.BiometricAttendance.pdb
+\\vmware-host\Shared Folders\Desktop\New Folder (2)\MEIP_System\src\MEIP_System.BiometricAttendance\obj\x86\Debug\MEIP_System.BiometricAttendance.exe
+\\vmware-host\Shared Folders\Desktop\New Folder (2)\MEIP_System\src\MEIP_System.BiometricAttendance\obj\x86\Debug\MEIP_System.BiometricAttendance.pdb
+C:\MEIP_System_V1\MEIP_System\bin\Debug\MEIP_System.BiometricAttendance.exe
+C:\MEIP_System_V1\MEIP_System\bin\Debug\MEIP_System.BiometricAttendance.pdb
+C:\MEIP_System_V1\MEIP_System\src\MEIP_System.BiometricAttendance\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\MEIP_System_V1\MEIP_System\src\MEIP_System.BiometricAttendance\obj\x86\Debug\MEIP_System.BiometricAttendance.Form1.resources
+C:\MEIP_System_V1\MEIP_System\src\MEIP_System.BiometricAttendance\obj\x86\Debug\MEIP_System.BiometricAttendance.Properties.Resources.resources
+C:\MEIP_System_V1\MEIP_System\src\MEIP_System.BiometricAttendance\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\MEIP_System_V1\MEIP_System\src\MEIP_System.BiometricAttendance\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\MEIP_System_V1\MEIP_System\src\MEIP_System.BiometricAttendance\obj\x86\Debug\MEIP_System.BiometricAttendance.exe
+C:\MEIP_System_V1\MEIP_System\src\MEIP_System.BiometricAttendance\obj\x86\Debug\MEIP_System.BiometricAttendance.pdb
+\\vmware-host\Shared Folders\Desktop\MEIP_System_V1\MEIP_System\bin\Debug\MEIP_System.BiometricAttendance.exe
+\\vmware-host\Shared Folders\Desktop\MEIP_System_V1\MEIP_System\bin\Debug\MEIP_System.BiometricAttendance.pdb
+\\vmware-host\Shared Folders\Desktop\MEIP_System_V1\MEIP_System\src\MEIP_System.BiometricAttendance\obj\x86\Debug\ResolveAssemblyReference.cache
+\\vmware-host\Shared Folders\Desktop\MEIP_System_V1\MEIP_System\src\MEIP_System.BiometricAttendance\obj\x86\Debug\MEIP_System.BiometricAttendance.Form1.resources
+\\vmware-host\Shared Folders\Desktop\MEIP_System_V1\MEIP_System\src\MEIP_System.BiometricAttendance\obj\x86\Debug\MEIP_System.BiometricAttendance.Properties.Resources.resources
+\\vmware-host\Shared Folders\Desktop\MEIP_System_V1\MEIP_System\src\MEIP_System.BiometricAttendance\obj\x86\Debug\GenerateResource.read.1.tlog
+\\vmware-host\Shared Folders\Desktop\MEIP_System_V1\MEIP_System\src\MEIP_System.BiometricAttendance\obj\x86\Debug\GenerateResource.write.1.tlog
+\\vmware-host\Shared Folders\Desktop\MEIP_System_V1\MEIP_System\src\MEIP_System.BiometricAttendance\obj\x86\Debug\MEIP_System.BiometricAttendance.exe
+\\vmware-host\Shared Folders\Desktop\MEIP_System_V1\MEIP_System\src\MEIP_System.BiometricAttendance\obj\x86\Debug\MEIP_System.BiometricAttendance.pdb

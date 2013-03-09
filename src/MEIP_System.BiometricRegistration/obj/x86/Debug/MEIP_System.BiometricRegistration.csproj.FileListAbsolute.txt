@@ -1,0 +1,27 @@
+\\vmware-host\Shared Folders\Desktop\MEIP_System\bin\Debug\MEIP_System.BiometricRegistration.exe
+\\vmware-host\Shared Folders\Desktop\MEIP_System\bin\Debug\MEIP_System.BiometricRegistration.pdb
+\\vmware-host\Shared Folders\Desktop\MEIP_System\src\MEIP_System.BiometricRegistration\obj\x86\Debug\ResolveAssemblyReference.cache
+\\vmware-host\Shared Folders\Desktop\MEIP_System\src\MEIP_System.BiometricRegistration\obj\x86\Debug\MEIP_System.BiometricRegistration.Registration.resources
+\\vmware-host\Shared Folders\Desktop\MEIP_System\src\MEIP_System.BiometricRegistration\obj\x86\Debug\MEIP_System.BiometricRegistration.Properties.Resources.resources
+\\vmware-host\Shared Folders\Desktop\MEIP_System\src\MEIP_System.BiometricRegistration\obj\x86\Debug\GenerateResource.read.1.tlog
+\\vmware-host\Shared Folders\Desktop\MEIP_System\src\MEIP_System.BiometricRegistration\obj\x86\Debug\GenerateResource.write.1.tlog
+\\vmware-host\Shared Folders\Desktop\MEIP_System\src\MEIP_System.BiometricRegistration\obj\x86\Debug\MEIP_System.BiometricRegistration.exe
+\\vmware-host\Shared Folders\Desktop\MEIP_System\src\MEIP_System.BiometricRegistration\obj\x86\Debug\MEIP_System.BiometricRegistration.pdb
+C:\MEIP_System\bin\Debug\MEIP_System.BiometricRegistration.exe
+C:\MEIP_System\bin\Debug\MEIP_System.BiometricRegistration.pdb
+C:\MEIP_System\src\MEIP_System.BiometricRegistration\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\MEIP_System\src\MEIP_System.BiometricRegistration\obj\x86\Debug\MEIP_System.BiometricRegistration.Registration.resources
+C:\MEIP_System\src\MEIP_System.BiometricRegistration\obj\x86\Debug\MEIP_System.BiometricRegistration.Properties.Resources.resources
+C:\MEIP_System\src\MEIP_System.BiometricRegistration\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\MEIP_System\src\MEIP_System.BiometricRegistration\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\MEIP_System\src\MEIP_System.BiometricRegistration\obj\x86\Debug\MEIP_System.BiometricRegistration.exe
+C:\MEIP_System\src\MEIP_System.BiometricRegistration\obj\x86\Debug\MEIP_System.BiometricRegistration.pdb
+\\vmware-host\Shared Folders\Desktop\MEIP_System_V1\MEIP_System\bin\Debug\MEIP_System.BiometricRegistration.exe
+\\vmware-host\Shared Folders\Desktop\MEIP_System_V1\MEIP_System\bin\Debug\MEIP_System.BiometricRegistration.pdb
+\\vmware-host\Shared Folders\Desktop\MEIP_System_V1\MEIP_System\src\MEIP_System.BiometricRegistration\obj\x86\Debug\ResolveAssemblyReference.cache
+\\vmware-host\Shared Folders\Desktop\MEIP_System_V1\MEIP_System\src\MEIP_System.BiometricRegistration\obj\x86\Debug\MEIP_System.BiometricRegistration.Registration.resources
+\\vmware-host\Shared Folders\Desktop\MEIP_System_V1\MEIP_System\src\MEIP_System.BiometricRegistration\obj\x86\Debug\MEIP_System.BiometricRegistration.Properties.Resources.resources
+\\vmware-host\Shared Folders\Desktop\MEIP_System_V1\MEIP_System\src\MEIP_System.BiometricRegistration\obj\x86\Debug\GenerateResource.read.1.tlog
+\\vmware-host\Shared Folders\Desktop\MEIP_System_V1\MEIP_System\src\MEIP_System.BiometricRegistration\obj\x86\Debug\GenerateResource.write.1.tlog
+\\vmware-host\Shared Folders\Desktop\MEIP_System_V1\MEIP_System\src\MEIP_System.BiometricRegistration\obj\x86\Debug\MEIP_System.BiometricRegistration.exe
+\\vmware-host\Shared Folders\Desktop\MEIP_System_V1\MEIP_System\src\MEIP_System.BiometricRegistration\obj\x86\Debug\MEIP_System.BiometricRegistration.pdb

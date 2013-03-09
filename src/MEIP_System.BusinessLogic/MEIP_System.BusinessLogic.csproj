@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{46C70F21-1907-446B-87B5-2BCDA30F86FE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MEIP_System.BusinessLogic</RootNamespace>
+    <AssemblyName>MEIP_System.BusinessLogic</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Enum.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Request\RequestActivateAccount.cs" />
+    <Compile Include="Request\RequestAddSiblingInfo.cs" />
+    <Compile Include="Request\RequestAddUser.cs" />
+    <Compile Include="Request\RequestAddWorkExperience.cs" />
+    <Compile Include="Request\RequestAuditTrail.cs" />
+    <Compile Include="Request\RequestDeactivateAccount.cs" />
+    <Compile Include="Request\RequestGetUserID.cs" />
+    <Compile Include="Request\RequestLeaveRequest.cs" />
+    <Compile Include="Request\RequestLogin.cs" />
+    <Compile Include="Request\RequestSearchEmployees.cs" />
+    <Compile Include="Request\RequestUpdateContactInfo.cs" />
+    <Compile Include="Request\RequestUpdateEducationalInfo.cs" />
+    <Compile Include="Request\RequestUpdateFamilyInfo.cs" />
+    <Compile Include="Request\RequestUpdateLeaveRequest.cs" />
+    <Compile Include="Request\RequestUpdatePassword.cs" />
+    <Compile Include="Request\RequestUpdateSiblingInfo.cs" />
+    <Compile Include="Request\RequestUpdateWorkExperience.cs" />
+    <Compile Include="Request\RequestVerifyRequests.cs" />
+    <Compile Include="Request\RequestViewAuditTrail.cs" />
+    <Compile Include="Request\RequestViewCompanyInfo.cs" />
+    <Compile Include="Request\RequestViewContactInfo.cs" />
+    <Compile Include="Request\RequestViewEducInfo.cs" />
+    <Compile Include="Request\RequestViewFamilyInfo.cs" />
+    <Compile Include="Request\RequestViewGeneralInfo.cs" />
+    <Compile Include="Request\RequestViewGovtInfo.cs" />
+    <Compile Include="Request\RequestViewLeaveRequest.cs" />
+    <Compile Include="Request\RequestViewSiblingInfo.cs" />
+    <Compile Include="Request\RequestViewWorkExperience.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
