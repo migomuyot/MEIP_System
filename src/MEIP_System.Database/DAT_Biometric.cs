@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -94,9 +94,13 @@ namespace MEIP_System
             {
                 #region AWOL
                 #region WEEKEND
-                int weekend = 1;
+                int weekend = 0;
 
-                if (DateTime.Now.DayOfWeek == DayOfWeek.Sunday)
+                if (DateTime.Now.DayOfWeek == DayOfWeek.Saturday)
+                {
+                    weekend = -1;
+                }
+                else if (DateTime.Now.DayOfWeek == DayOfWeek.Sunday)
                 {
                     weekend = -2;
                 }
@@ -106,21 +110,28 @@ namespace MEIP_System
                 }
                 #endregion
 
-                da = new SqlDataAdapter("select * from tblAttendance where (DATEPART(yy, TimeIn) = '" + DateTime.Now.Year + "' AND DATEPART(mm, TimeIn) = '" + DateTime.Now.Month + "'AND DATEPART(dd, TimeIn) = '" + DateTime.Now.AddDays(weekend).Day.ToString() + "')", cs);
+                //Checks the weekend
+                da = new SqlDataAdapter("select * from tblAttendance where (DATEPART(yy, TimeIn) = '" + DateTime.Now.Year + "' AND DATEPART(mm, TimeIn) = '" + DateTime.Now.Month + "'AND DATEPART(dd, TimeIn) = '" + DateTime.Now.AddDays(weekend).Day.ToString() + "') AND UserID = '" + userID + "'", cs);
                 da.Fill(dt);
 
                 if (dt.Rows.Count == 0)
                 {
-                    da = new SqlDataAdapter("select * from tblAttendance where (DATEPART(yy, TimeIn) = '" + DateTime.Now.Year + "' AND DATEPART(mm, TimeIn) = '" + DateTime.Now.Month + "'AND DATEPART(dd, TimeIn) = '" + DateTime.Now.Day + "')", cs);
+                    //Checks if AWOL is PRESENT Today
+                    da = new SqlDataAdapter("select * from tblAttendance where (DATEPART(yy, TimeIn) = '" + DateTime.Now.Year + "' AND DATEPART(mm, TimeIn) = '" + DateTime.Now.Month + "'AND DATEPART(dd, TimeIn) = '" + DateTime.Now.Day + "') AND UserID = " + userID + " AND AWOL = 1", cs);
                     da.Fill(today);
 
                     if (today.Rows.Count == 0)
                     {
-                        da = new SqlDataAdapter("INSERT INTO tblAttendance (UserID, AWOL) values ('" + userID + "', 1.0)", cs);
+                        string yesterday = "'" + DateTime.Now.Year.ToString() + "/" + DateTime.Now.Month.ToString() + "/" + DateTime.Now.AddDays(weekend).Day.ToString() + "'";
+                        //Inserts AWOL with Date of AWOL
+                        da = new SqlDataAdapter("INSERT INTO tblAttendance (UserID, AWOL, TimeIn, TimeOut) values ('" + userID + "', 1.0, " + yesterday + "," + yesterday + ")", cs);
                         da.Fill(dt);
                     }
                 }
                 #endregion
+                //Checks if there is an existing late record
+                da = new SqlDataAdapter("select * from tblAttendance where (DATEPART(yy, TimeIn) = '" + DateTime.Now.Year + "' AND DATEPART(mm, TimeIn) = '" + DateTime.Now.Month + "'AND DATEPART(dd, TimeIn) = '" + DateTime.Now.Day + "') AND UserID = " + userID + " AND Late = 1", cs);
+                da.Fill(today);
                 //DateTime late = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 9, 0, 0);
                 if (today.Rows.Count == 0)
                 {
