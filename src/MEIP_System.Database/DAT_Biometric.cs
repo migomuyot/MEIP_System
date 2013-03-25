@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -27,7 +27,7 @@ namespace MEIP_System
         public static int ViewNoFingerprint(string UserID)
         {
             DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("select UserID from tblUsers where UserID = (select DISTINCT UserID from tblAttendance where UserID ='" + UserID + "')", cs);
+            SqlDataAdapter da = new SqlDataAdapter("select UserID from tblUsers where UserID = (select DISTINCT UserID from tblAttendance1 where UserID ='" + UserID + "')", cs);
             da.Fill(dt);
             return dt.Rows.Count;
         }
@@ -113,26 +113,26 @@ namespace MEIP_System
                 #endregion
 
                 //Checks the weekend
-                da = new SqlDataAdapter("select * from tblAttendance where (DATEPART(yy, TimeIn) = '" + DateTime.Now.Year + "' AND DATEPART(mm, TimeIn) = '" + DateTime.Now.Month + "'AND DATEPART(dd, TimeIn) = '" + DateTime.Now.AddDays(weekend).Day.ToString() + "') AND UserID = '" + userID + "'", cs);
+                da = new SqlDataAdapter("select * from tblAttendance1 where (DATEPART(yy, TimeIn) = '" + DateTime.Now.Year + "' AND DATEPART(mm, TimeIn) = '" + DateTime.Now.Month + "'AND DATEPART(dd, TimeIn) = '" + DateTime.Now.AddDays(weekend).Day.ToString() + "') AND UserID = '" + userID + "'", cs);
                 da.Fill(dt);
 
                 if (dt.Rows.Count == 0)
                 {
                     //Checks if AWOL is PRESENT Today
-                    da = new SqlDataAdapter("select * from tblAttendance where (DATEPART(yy, TimeIn) = '" + DateTime.Now.Year + "' AND DATEPART(mm, TimeIn) = '" + DateTime.Now.Month + "'AND DATEPART(dd, TimeIn) = '" + DateTime.Now.Day + "') AND UserID = " + userID + " AND AWOL = 1", cs);
+                    da = new SqlDataAdapter("select * from tblAttendance1 where (DATEPART(yy, TimeIn) = '" + DateTime.Now.Year + "' AND DATEPART(mm, TimeIn) = '" + DateTime.Now.Month + "'AND DATEPART(dd, TimeIn) = '" + DateTime.Now.Day + "') AND UserID = " + userID + " AND AWOL = 1", cs);
                     da.Fill(today);
 
                     if (today.Rows.Count == 0)
                     {
                         string yesterday = "'" + DateTime.Now.Year.ToString() + "/" + DateTime.Now.Month.ToString() + "/" + DateTime.Now.AddDays(weekend).Day.ToString() + "'";
                         //Inserts AWOL with Date of AWOL
-                        da = new SqlDataAdapter("INSERT INTO tblAttendance (UserID, AWOL, TimeIn, TimeOut) values ('" + userID + "', 1.0, " + yesterday + "," + yesterday + ")", cs);
+                        da = new SqlDataAdapter("INSERT INTO tblAttendance1 (UserID, AWOL, TimeIn, TimeOut) values ('" + userID + "', 1.0, " + yesterday + "," + yesterday + ")", cs);
                         da.Fill(dt);
                     }
                 }
                 #endregion
                 //Checks if there is an existing late record
-                da = new SqlDataAdapter("select * from tblAttendance where (DATEPART(yy, TimeIn) = '" + DateTime.Now.Year + "' AND DATEPART(mm, TimeIn) = '" + DateTime.Now.Month + "'AND DATEPART(dd, TimeIn) = '" + DateTime.Now.Day + "') AND UserID = " + userID + " AND AWOL = 1", cs);
+                da = new SqlDataAdapter("select * from tblAttendance1 where (DATEPART(yy, TimeIn) = '" + DateTime.Now.Year + "' AND DATEPART(mm, TimeIn) = '" + DateTime.Now.Month + "'AND DATEPART(dd, TimeIn) = '" + DateTime.Now.Day + "') AND UserID = " + userID + " AND AWOL = 1", cs);
                 da.Fill(today);
                 //DateTime late = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 9, 0, 0);
                 if (today.Rows.Count == 0)
@@ -141,19 +141,19 @@ namespace MEIP_System
                     DateTime late = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 10, 10, 0);
                     if (DateTime.Now >= late)
                     {
-                        da = new SqlDataAdapter("INSERT INTO tblAttendance (UserID, TimeIn, Late) values ('" + userID + "', GETDATE(), 1.0)", cs);
+                        da = new SqlDataAdapter("INSERT INTO tblAttendance1 (UserID, TimeIn, Late) values ('" + userID + "', GETDATE(), 1.0)", cs);
                     }
                     #endregion
                 }
                 else
                 {
-                    da = new SqlDataAdapter("INSERT INTO tblAttendance (UserID, TimeIn) values ('" + userID + "', GETDATE())", cs);
+                    da = new SqlDataAdapter("INSERT INTO tblAttendance1 (UserID, TimeIn) values ('" + userID + "', GETDATE())", cs);
                 }
             }
             else
             {
                 DateTime day = DateTime.Now.AddDays(weekend);
-                da = new SqlDataAdapter("select TimeOut from tblAttendance where '" + day.Day + " " + DateTime.Now.ToString("MMM") + " " + DateTime.Now.Year + "' <= TimeIn AND TimeIn < '" + DateTime.Now.Day + " " + DateTime.Now.ToString("MMM") + " " + DateTime.Now.Year + "' AND UserID = " + userID + " ORDER BY TimeOut ASC", cs);
+                da = new SqlDataAdapter("select TimeOut from tblAttendance1 where '" + day.Day + " " + DateTime.Now.ToString("MMM") + " " + DateTime.Now.Year + "' <= TimeIn AND TimeIn < '" + DateTime.Now.Day + " " + DateTime.Now.ToString("MMM") + " " + DateTime.Now.Year + "' AND UserID = " + userID + " ORDER BY TimeOut ASC", cs);
                 da.Fill(dt);
                 if (dt.Rows.Count != 0 && dt.Rows[0][0] != null)
                 {
@@ -161,13 +161,13 @@ namespace MEIP_System
                     da.Fill(dt);
                     InsertAttendance(userID, "In");
                 }
-                da = new SqlDataAdapter("UPDATE tblAttendance set TimeOut = GETDATE() where AttendanceID = (SELECT MAX(AttendanceID) from tblAttendance where UserID = '" + userID + "')", cs);
-                
+                da = new SqlDataAdapter("UPDATE tblAttendance1 set TimeOut = GETDATE() where AttendanceID = (SELECT MAX(AttendanceID) from tblAttendance1 where UserID = '" + userID + "')", cs);
+
                 //DateTime undertime = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 18, 0, 0);
                 DateTime undertime = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 12, 30, 0);
                 if (DateTime.Now <= undertime)
                 {
-                    da = new SqlDataAdapter("UPDATE tblAttendance set TimeOut = GETDATE(), Undertime = 1.0 where AttendanceID = (SELECT MAX(AttendanceID) from tblAttendance where UserID = '" + userID + "')", cs);
+                    da = new SqlDataAdapter("UPDATE tblAttendance1 set TimeOut = GETDATE(), Undertime = 1.0 where AttendanceID = (SELECT MAX(AttendanceID) from tblAttendance1 where UserID = '" + userID + "')", cs);
                 }
             }
             da.Fill(dt);

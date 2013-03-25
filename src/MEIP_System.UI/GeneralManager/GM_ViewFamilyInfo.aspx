@@ -1,5 +1,9 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="GM_ViewFamilyInfo.aspx.cs" Inherits="MEIP_System.UI.GeneralManager.GM_ViewFamilyInfo" %>
-<!DOCTYPE html >
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
 <link href="../CSS/Style.css" rel="stylesheet" type="text/css" />
 <head>
     <title></title>
@@ -17,16 +21,59 @@
 				</ul>
 			</div><!--end of nav-->
     <div id="container">
-    <div class="Side_bar"></div><!--end of side bar (leftside)-->
+    <div class="Side_bar">
+        <div id="navigation">
+<ul>
+   <li><a class="nav_profile" href="#"></a>
+	  <ul class="sub-level">
+		 <li><a href="GM_Home.aspx"><span>General Information</span></a></li>
+		 <li><a href="GM_ViewGovtInfo.aspx"><span>Government Related</span></a></li>
+		 <li><a href="GM_ViewContactInfo.aspx"><span>Contact Information</span></a></li>
+         <li><a href="GM_ViewFamilyInfo.aspx"><span>Family Background</span></a></li>
+         <li><a href="GM_ViewEducInfo.aspx"><span>Education</span></a></li>
+      </ul>
+   </li>
+    <li><a class="nav_time" href="#"></a>
+		<ul class="sub-level">
+         <li><span>Attendance</span></li>
+		 <li><a href="../EmployeeSelfService/EmployeeSelf_GMVerifyRequest.aspx"><span>Requests</span></a></li>
+		 <li><a href="../Timekeeping/Timekeeping_AddTask.aspx"><span>Scehudule</span></a></li>
+          <li><span>Reports</span></a></li>
+      </ul>
+   </li>
+     <li><a class="nav_accounts" href="#"></a>
+		<ul class="sub-level">
+         <li><a href="GM_SearchEmployees.aspx"><span>Search Accounts</span></a></li>
+		 <li><a href="GM_AddUsers.aspx"><span>Add New Employee Profile</span></a></li>
+		
+      </ul>
+   </li>
+   <li><a class="nav_benefits" href="#"></a>
+		<ul class="sub-level">
+         <li><a href='#'><span>View Benefits</span></a></li>
+		 <li><a href='#'><span>Generate Benefits</span></a></li>
+		
+      </ul>
+      </li>
+ 
+ <li><a class="nav_management" href="#"></a>
+		<ul class="sub-level">
+         <li><a href='#'><span>Payroll </span></a></li>
+		 <li><a href="GM_ViewReports.aspx"></a><span>Reports</span></a></li>
+		
+      </ul>
+      </li>
+      </ul>
+    </div><!--end of navigation-->
+    </div><!--end of side bar (leftside)-->
   <div class="Working_Area">
- <div style="height:700px; overflow:auto;" >
+  <div style="height:700px; overflow:auto;" >
      <br />
+         <div class="Content_Header"><img src="../Images/FamilyInformation.png" /></div>
     <center>
     <div class="divider"></div>
     </center>
    <center>
-    <br />
-    <b>PARENTS</b>
     <br />
         <asp:GridView ID="GridViewFamilyInfo" runat="server" 
             onselectedindexchanged="GridViewFamilyInfo_SelectedIndexChanged" GridLines="None"    
@@ -43,7 +90,7 @@
             </Columns>
         </asp:GridView>
         <br />
-        <table>
+        <table  style="font-family: Arial, Helvetica, sans-serif" cellspacing="0">
         <tr>
         <td><h2>&nbsp;</h2></td>
         <td>Father</td>
@@ -70,7 +117,7 @@
         </tr>
         <tr>
         <td>Contact Number:</td>
-        <td><asp:TextBox ID="txtFatherCNum" CssClass="tb" runat="server"></asp:TextBox>
+        <td><asp:TextBox ID="txtFatherCNum" CssClass="tb" runat="server"></asp:TextBox></td>
         <td>Contact Number:</td>
         <td><asp:TextBox ID="txtMotherCNum" CssClass="tb" runat="server"></asp:TextBox></td>
         </tr>
@@ -102,7 +149,7 @@
             </Columns>
         </asp:GridView>
         <br />
-        <table>
+        <table  style="font-family: Arial, Helvetica, sans-serif" cellspacing="0">
         <tr>
         <td><h2>&nbsp;</h2></td>
         <td>Sibling</td>
@@ -110,6 +157,7 @@
         <td>Sibling ID:</td>
         <td><asp:TextBox ID="txtSiblingID" CssClass="tb" runat="server" ReadOnly="True" Width="38px"></asp:TextBox></td>
         </tr>
+
         </tr>
         <tr>
         <td>First Name:</td>
@@ -145,7 +193,8 @@
         <center>
     <div class="divider"></div>
     </center>
-    
+    </center>
+    </div>
     </div><!--end of working area-->
     </div><!--end of container-->
     </div><!--end of wrapper-->

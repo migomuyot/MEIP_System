@@ -28,15 +28,15 @@ C:\MEIP_System\src\MEIP_System.Database\obj\Debug\MEIP_System.Database.pdb
 \\vmware-host\Shared Folders\Downloads\MEIP_System_V1\MEIP_System\src\MEIP_System.Database\obj\Debug\ResolveAssemblyReference.cache
 \\vmware-host\Shared Folders\Downloads\MEIP_System_V1\MEIP_System\src\MEIP_System.Database\obj\Debug\MEIP_System.Database.dll
 \\vmware-host\Shared Folders\Downloads\MEIP_System_V1\MEIP_System\src\MEIP_System.Database\obj\Debug\MEIP_System.Database.pdb
-C:\MEIP_System_V1\MEIP_System\bin\Debug\MEIP_System.Database.dll.config
-C:\MEIP_System_V1\MEIP_System\bin\Debug\MEIP_System.Database.dll
-C:\MEIP_System_V1\MEIP_System\bin\Debug\MEIP_System.Database.pdb
-C:\MEIP_System_V1\MEIP_System\src\MEIP_System.Database\obj\Debug\ResolveAssemblyReference.cache
-C:\MEIP_System_V1\MEIP_System\src\MEIP_System.Database\obj\Debug\MEIP_System.Database.dll
-C:\MEIP_System_V1\MEIP_System\src\MEIP_System.Database\obj\Debug\MEIP_System.Database.pdb
 \\vmware-host\Shared Folders\Desktop\MEIP_System_V1\MEIP_System\bin\Debug\MEIP_System.Database.dll.config
 \\vmware-host\Shared Folders\Desktop\MEIP_System_V1\MEIP_System\bin\Debug\MEIP_System.Database.dll
 \\vmware-host\Shared Folders\Desktop\MEIP_System_V1\MEIP_System\bin\Debug\MEIP_System.Database.pdb
 \\vmware-host\Shared Folders\Desktop\MEIP_System_V1\MEIP_System\src\MEIP_System.Database\obj\Debug\ResolveAssemblyReference.cache
 \\vmware-host\Shared Folders\Desktop\MEIP_System_V1\MEIP_System\src\MEIP_System.Database\obj\Debug\MEIP_System.Database.dll
 \\vmware-host\Shared Folders\Desktop\MEIP_System_V1\MEIP_System\src\MEIP_System.Database\obj\Debug\MEIP_System.Database.pdb
+C:\MEIP_System_V1\MEIP_System\bin\Debug\MEIP_System.Database.dll.config
+C:\MEIP_System_V1\MEIP_System\bin\Debug\MEIP_System.Database.dll
+C:\MEIP_System_V1\MEIP_System\bin\Debug\MEIP_System.Database.pdb
+C:\MEIP_System_V1\MEIP_System\src\MEIP_System.Database\obj\Debug\ResolveAssemblyReference.cache
+C:\MEIP_System_V1\MEIP_System\src\MEIP_System.Database\obj\Debug\MEIP_System.Database.dll
+C:\MEIP_System_V1\MEIP_System\src\MEIP_System.Database\obj\Debug\MEIP_System.Database.pdb

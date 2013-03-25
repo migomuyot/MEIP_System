@@ -5,7 +5,7 @@
 <head><title>Employee Information Portal</title></head>
 <body>
     <form id="form1" runat="server">
-    <div id="wrapper">
+    <div id="Login_wrapper">
     <div id="container">
  <div id="LoginForm">
      <table align="center" cellspacing="3">

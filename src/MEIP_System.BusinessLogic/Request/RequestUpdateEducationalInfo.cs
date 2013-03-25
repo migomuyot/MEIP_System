@@ -3,33 +3,55 @@ namespace MEIP_System
 {
     public class RequestUpdateEducationalInfo
     {
+        int _educInfoID;
         string _username;
-        string _graduateSchool;
-        string _courseTaken;
-        string _yearGraduated;
+        string _school;
+        string _degree;
+        string _course;
+        int _yearGraduated;
 
         public RequestUpdateEducationalInfo()
         { }
 
+        public RequestUpdateEducationalInfo(int educInfoID, string username, string school, string degree, string course, int yearGraduated)
+        {
+            _educInfoID = educInfoID;
+            _username = username;
+            _school = school;
+            _degree = degree;
+            _course = course;
+            _yearGraduated = yearGraduated;
+        }
+
+        public int EducInfoID
+        {
+            get { return _educInfoID; }
+            set { _educInfoID = value; }
+        }
         public string Username
         {
             get { return _username; }
             set { _username = value; }
         }
 
-        public string GraduateSchool
+        public string School
         {
-            get { return _graduateSchool; }
-            set { _graduateSchool = value; }
+            get { return _school; }
+            set { _school = value; }
         }
 
-        public string CourseTaken
+        public string Degree
         {
-            get { return _courseTaken; }
-            set { _courseTaken = value; }
+            get { return _degree; }
+            set { _degree = value; }
+        }
+        public string Course
+        {
+            get { return _course; }
+            set { _course = value; }
         }
 
-        public string YearGraduated
+        public int YearGraduated
         {
             get { return _yearGraduated; }
             set { _yearGraduated = value; }

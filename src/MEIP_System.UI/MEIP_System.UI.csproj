@@ -14,6 +14,7 @@
     <AssemblyName>MEIP_System.UI</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <UseIISExpress>false</UseIISExpress>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -33,55 +34,61 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="itextsharp, Version=5.4.0.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
-    <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="CSS\Style.css" />
     <Content Include="EmployeeSelfService\EmployeeSelf_EmployeeLeaveRequest.aspx" />
+    <Content Include="EmployeeSelfService\EmployeeSelf_EmployeeTimeChangeRequest.aspx" />
     <Content Include="EmployeeSelfService\EmployeeSelf_GMVerifyRequest.aspx" />
     <Content Include="Employee\Employee_AddWorkExperience.aspx" />
     <Content Include="Employee\Employee_Home.aspx" />
     <Content Include="Employee\Employee_UpdateContactInfo.aspx" />
-    <Content Include="Employee\Employee_UpdateEducInfo.aspx" />
     <Content Include="Employee\Employee_ViewContactInfo.aspx" />
+    <Content Include="Employee\Employee_ViewDailyReport.aspx" />
     <Content Include="Employee\Employee_ViewEducInfo.aspx" />
     <Content Include="Employee\Employee_ViewFamilyInfo.aspx" />
     <Content Include="Employee\Employee_ViewGovtInfo.aspx" />
     <Content Include="Employee\Employee_ViewWorkExperience.aspx" />
+    <Content Include="ExternalAccountant\EA_ComputePayroll.aspx" />
+    <Content Include="ExternalAccountant\EA_Home.aspx" />
+    <Content Include="ExternalAccountant\EA_RegisterEmployeeCompensation.aspx" />
     <Content Include="GeneralManager\GM_AddUsers.aspx" />
     <Content Include="GeneralManager\GM_DeactivateAccount.aspx" />
+    <Content Include="GeneralManager\GM_EducationalInfo.aspx" />
     <Content Include="GeneralManager\GM_Home.aspx" />
     <Content Include="GeneralManager\GM_SearchEmployees.aspx" />
     <Content Include="GeneralManager\GM_UpdateContactInfo.aspx" />
-    <Content Include="GeneralManager\GM_UpdateEducInfo.aspx" />
-    <Content Include="GeneralManager\GM_ViewAuditTrail.aspx" />
     <Content Include="GeneralManager\GM_ViewCompanyInfo.aspx" />
     <Content Include="GeneralManager\GM_ViewContactInfo.aspx" />
-    <Content Include="GeneralManager\GM_ViewEducInfo.aspx" />
     <Content Include="GeneralManager\GM_ViewFamilyInfo.aspx" />
     <Content Include="GeneralManager\GM_ViewGovtInfo.aspx" />
     <Content Include="GeneralManager\GM_ViewWorkExperience.aspx" />
+    <Content Include="Images\AccountManagement.png" />
     <Content Include="Images\bg1.jpg" />
     <Content Include="Images\bg6.jpg" />
     <Content Include="Images\bgOFF1.gif" />
-    <Content Include="Images\contacts.png" />
-    <Content Include="Images\Education.png" />
+    <Content Include="Images\ContactInformation.png" />
+    <Content Include="Images\Educationalbackground.png" />
+    <Content Include="Images\FamilyInformation.png" />
     <Content Include="Images\Father.ico" />
+    <Content Include="Images\GovernementInformation.png" />
     <Content Include="Images\grd_alt.png" />
     <Content Include="Images\grd_head.png" />
     <Content Include="Images\grd_pgr.png" />
@@ -89,13 +96,20 @@
     <Content Include="Images\logo.png" />
     <Content Include="Images\Mother.ico" />
     <Content Include="Images\navigation.png" />
-    <Content Include="Images\Profile.ico" />
+    <Content Include="Images\navigation_gm.png" />
+    <Content Include="Images\PDF.jpg" />
+    <Content Include="Images\ProfileInFormation.png" />
     <Content Include="Images\siblings.ico" />
     <Content Include="Images\WorkArea-BG.png" />
     <Content Include="Images\workexperience.png" />
     <Content Include="Login.aspx" />
+    <Content Include="SystemAdmin\SystemsAdmin_Home.aspx" />
     <Content Include="Timekeeping\Timekeeping_AddTask.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Timekeeping\Timekeeping_RetrieveAttendanceRecords.aspx" />
+    <Content Include="Timekeeping\Timekeeping_SearchEmployeeAttendance.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -110,6 +124,13 @@
     </Compile>
     <Compile Include="EmployeeSelfService\EmployeeSelf_EmployeeLeaveRequest.aspx.designer.cs">
       <DependentUpon>EmployeeSelf_EmployeeLeaveRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeSelfService\EmployeeSelf_EmployeeTimeChangeRequest.aspx.cs">
+      <DependentUpon>EmployeeSelf_EmployeeTimeChangeRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmployeeSelfService\EmployeeSelf_EmployeeTimeChangeRequest.aspx.designer.cs">
+      <DependentUpon>EmployeeSelf_EmployeeTimeChangeRequest.aspx</DependentUpon>
     </Compile>
     <Compile Include="EmployeeSelfService\EmployeeSelf_GMVerifyRequest.aspx.cs">
       <DependentUpon>EmployeeSelf_GMVerifyRequest.aspx</DependentUpon>
@@ -139,19 +160,19 @@
     <Compile Include="Employee\Employee_UpdateContactInfo.aspx.designer.cs">
       <DependentUpon>Employee_UpdateContactInfo.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Employee\Employee_UpdateEducInfo.aspx.cs">
-      <DependentUpon>Employee_UpdateEducInfo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Employee\Employee_UpdateEducInfo.aspx.designer.cs">
-      <DependentUpon>Employee_UpdateEducInfo.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Employee\Employee_ViewContactInfo.aspx.cs">
       <DependentUpon>Employee_ViewContactInfo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Employee\Employee_ViewContactInfo.aspx.designer.cs">
       <DependentUpon>Employee_ViewContactInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\Employee_ViewDailyReport.aspx.cs">
+      <DependentUpon>Employee_ViewDailyReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Employee\Employee_ViewDailyReport.aspx.designer.cs">
+      <DependentUpon>Employee_ViewDailyReport.aspx</DependentUpon>
     </Compile>
     <Compile Include="Employee\Employee_ViewEducInfo.aspx.cs">
       <DependentUpon>Employee_ViewEducInfo.aspx</DependentUpon>
@@ -181,6 +202,27 @@
     <Compile Include="Employee\Employee_ViewWorkExperience.aspx.designer.cs">
       <DependentUpon>Employee_ViewWorkExperience.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ExternalAccountant\EA_ComputePayroll.aspx.cs">
+      <DependentUpon>EA_ComputePayroll.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExternalAccountant\EA_ComputePayroll.aspx.designer.cs">
+      <DependentUpon>EA_ComputePayroll.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExternalAccountant\EA_Home.aspx.cs">
+      <DependentUpon>EA_Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExternalAccountant\EA_Home.aspx.designer.cs">
+      <DependentUpon>EA_Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExternalAccountant\EA_RegisterEmployeeCompensation.aspx.cs">
+      <DependentUpon>EA_RegisterEmployeeCompensation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExternalAccountant\EA_RegisterEmployeeCompensation.aspx.designer.cs">
+      <DependentUpon>EA_RegisterEmployeeCompensation.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GeneralManager\GM_AddUsers.aspx.cs">
       <DependentUpon>GM_AddUsers.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -194,6 +236,13 @@
     </Compile>
     <Compile Include="GeneralManager\GM_DeactivateAccount.aspx.designer.cs">
       <DependentUpon>GM_DeactivateAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralManager\GM_EducationalInfo.aspx.cs">
+      <DependentUpon>GM_EducationalInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GeneralManager\GM_EducationalInfo.aspx.designer.cs">
+      <DependentUpon>GM_EducationalInfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="GeneralManager\GM_Home.aspx.cs">
       <DependentUpon>GM_Home.aspx</DependentUpon>
@@ -216,20 +265,6 @@
     <Compile Include="GeneralManager\GM_UpdateContactInfo.aspx.designer.cs">
       <DependentUpon>GM_UpdateContactInfo.aspx</DependentUpon>
     </Compile>
-    <Compile Include="GeneralManager\GM_UpdateEducInfo.aspx.cs">
-      <DependentUpon>GM_UpdateEducInfo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="GeneralManager\GM_UpdateEducInfo.aspx.designer.cs">
-      <DependentUpon>GM_UpdateEducInfo.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="GeneralManager\GM_ViewAuditTrail.aspx.cs">
-      <DependentUpon>GM_ViewAuditTrail.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="GeneralManager\GM_ViewAuditTrail.aspx.designer.cs">
-      <DependentUpon>GM_ViewAuditTrail.aspx</DependentUpon>
-    </Compile>
     <Compile Include="GeneralManager\GM_ViewCompanyInfo.aspx.cs">
       <DependentUpon>GM_ViewCompanyInfo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -243,13 +278,6 @@
     </Compile>
     <Compile Include="GeneralManager\GM_ViewContactInfo.aspx.designer.cs">
       <DependentUpon>GM_ViewContactInfo.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="GeneralManager\GM_ViewEducInfo.aspx.cs">
-      <DependentUpon>GM_ViewEducInfo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="GeneralManager\GM_ViewEducInfo.aspx.designer.cs">
-      <DependentUpon>GM_ViewEducInfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="GeneralManager\GM_ViewFamilyInfo.aspx.cs">
       <DependentUpon>GM_ViewFamilyInfo.aspx</DependentUpon>
@@ -280,6 +308,13 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SystemAdmin\SystemsAdmin_Home.aspx.cs">
+      <DependentUpon>SystemsAdmin_Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SystemAdmin\SystemsAdmin_Home.aspx.designer.cs">
+      <DependentUpon>SystemsAdmin_Home.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Timekeeping\Timekeeping_AddTask.aspx.cs">
       <DependentUpon>Timekeeping_AddTask.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -287,9 +322,20 @@
     <Compile Include="Timekeeping\Timekeeping_AddTask.aspx.designer.cs">
       <DependentUpon>Timekeeping_AddTask.aspx</DependentUpon>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="SystemAdmin\" />
+    <Compile Include="Timekeeping\Timekeeping_RetrieveAttendanceRecords.aspx.cs">
+      <DependentUpon>Timekeeping_RetrieveAttendanceRecords.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Timekeeping\Timekeeping_RetrieveAttendanceRecords.aspx.designer.cs">
+      <DependentUpon>Timekeeping_RetrieveAttendanceRecords.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Timekeeping\Timekeeping_SearchEmployeeAttendance.aspx.cs">
+      <DependentUpon>Timekeeping_SearchEmployeeAttendance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Timekeeping\Timekeeping_SearchEmployeeAttendance.aspx.designer.cs">
+      <DependentUpon>Timekeeping_SearchEmployeeAttendance.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MEIP_System.BusinessLogic\MEIP_System.BusinessLogic.csproj">

@@ -1,8 +1,9 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Employee_ViewFamilyInfo.aspx.cs" Inherits="MEIP_System.UI.Employee.Employee_ViewFamilyInfo" %>
 
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml">
 <link href="../CSS/Style.css" rel="stylesheet" type="text/css" />
 <head>
     <title></title>
@@ -21,7 +22,8 @@
 			</div><!--end of nav-->
     <div id="container">
  
-    <div class="Side_bar">  <div id="navigation">
+    <div class="Side_bar"> 
+     <div id="navigation">
 <ul>
    <li><a class="nav_profile" href="#"></a>
 	  <ul class="sub-level">
@@ -29,14 +31,21 @@
 		 <li><a href="Employee_ViewGovtInfo.aspx"><span>Government Related</span></a></li>
 		 <li><a href="Employee_ViewContactInfo.aspx"><span>Contact Information</span></a></li>
          <li><a href="Employee_ViewFamilyInfo.aspx"><span>Family Background</span></a></li>
-         <li><a href="Employee_ViewEducInfo.aspx"><span>Educational Background</span></a></li>
+         <li><a href="Employee_ViewEducInfo.aspx"><span>Education</span></a></li>
       </ul>
    </li>
-
-   <li><a class="nav_time" href="#"></a>
+    <li><a class="nav_time" href="#"></a>
 		<ul class="sub-level">
-         <li><span>Attendance</span></a></li>
-		 <li><a href="../EmployeeSelfService/EmployeeSelf_AddLeaveRequest.aspx"><span>Requests</span></a></li>
+        <li><a href="#"><span>Attendance</span></a></li>
+        <ul>
+		 <li><a href="#">Request</a>
+                   <ul class="sub-level">
+                        <li><a href="../EmployeeSelf_EmployeeTimeChangeRequest.aspx"><span>Time Change</span></a></li>
+                        <li><a href="../EmployeeSelfService/EmployeeSelf_EmployeeLeaveRequest.aspx"><span>Leave Request</a></span></li>
+                    </ul>
+                </li>
+     
+     </ul>
 		 <li><a href='#'><span>Scehudule</span></a></li>
       </ul>
    </li>
@@ -52,12 +61,16 @@
 		 <li><a href='#'><span>Generate Benefits</span></a></li>
 		
       </ul>
+   
    </li>
 </ul>
-</div><!--end of navigation--></div><!--end of side bar (leftside)-->
+</div><!--end of navigation-->
+    </div><!--end of side bar (leftside)-->
     <div class="Working_Area">
      <div style="height:700px; overflow:auto;" >
     <br />
+     <br />
+    <div class="Content_Header"><img src="../Images/FamilyInformation.png" /></div>
     <center>
     <div class="divider"></div>
     </center>
@@ -81,39 +94,39 @@
             </Columns>
         </asp:GridView>
         <br />
-        <table>
+        <table style="font-family: Arial, Helvetica, sans-serif" cellspacing="0">
         <tr>
-        <td><img src="../Images/Father.ico" width="30" height="30" /></a></td>
+        <td class="style2"><img src="../Images/Father.ico" width="30" height="30" /></a></td>
         <td>Father</td>
         <td><img src="../Images/Mother.ico" width="30" height="30"></a></td>
         <td>Mother</td>
         </tr>
         <tr>
-        <td>Family Info ID:</td>
+        <td class="style2" >Family Info ID:</td>
         <td><asp:TextBox ID="txtFamilyInfoID" CssClass="tb" runat="server" Width="46px" ReadOnly="True"></asp:TextBox></td>
         <td></td>
         <td></td>
         </tr>
         <tr>
-        <td>First Name:</td>
+        <td class="style1">First Name:</td>
         <td><asp:TextBox ID="txtFatherFName" CssClass="tb" runat="server"></asp:TextBox></td>
         <td>First Name:</td>
         <td><asp:TextBox ID="txtMotherFName" CssClass="tb" runat="server" ontextchanged="txtMotherFName_TextChanged"></asp:TextBox></td>
         </tr>
         <tr>
-        <td>Last Name:</td>
+        <td class="style2">Last Name:</td>
         <td><asp:TextBox ID="txtFatherLName" CssClass="tb" runat="server"></asp:TextBox></td>
         <td>Last Name:</td>
         <td><asp:TextBox ID="txtMotherLName" CssClass="tb" runat="server"></asp:TextBox></td>
         </tr>
         <tr>
-        <td>Contact Number:</td>
+        <td class="style2">Contact Number:</td>
         <td><asp:TextBox ID="txtFatherCNum" CssClass="tb" runat="server"></asp:TextBox></td>
         <td>Contact Number:</td>
         <td><asp:TextBox ID="txtMotherCNum" CssClass="tb" runat="server"></asp:TextBox></td>
         </tr>
         <tr>
-        <td></td>
+        <td class="style2"></td>
         <td></td>
         <td></td>
         <td>
@@ -141,7 +154,7 @@
             </Columns>
         </asp:GridView>
         <br />
-        <table>
+        <table  style="font-family: Arial, Helvetica, sans-serif" cellspacing="0">
         <tr>
         <td><img src="../Images/siblings.ico" width="30" height="30"></a></td>
         <td>Sibling</td>
@@ -181,10 +194,11 @@
             <asp:Button ID="Button3" runat="server" CssClass="BlueButton" Text="Add Information" 
                 onclick="Button3_Click" Width="176px" /></td></tr>
         </table>
-    <br />
-    </center>
-    <center>
-    <div class="button"></div></center>
+        <br />
+  </center>
+  <center>
+  <div class="divider"></div>
+  </center>
     </div><!--end of wokring Area-->
     </div><!--end of container-->
     </div><!--end of wrapper-->

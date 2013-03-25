@@ -1,71 +1,87 @@
 ﻿body {
-	padding: auto;
-	margin: auto;
-	background:url("../Images/bg6.jpg") 0 0 repeat;
+  background :url("../Images/bg6.jpg")no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-#wrapper {
-	width:900px;
-	min-height: 100%;
-	padding:auto;
-	margin: auto;
-}
-.borderline
+#wrapper 
 {
-    width:auto;
-    height:auto;
-    border:2px solid #fff; 
+	width:900px;
+	min-height:940px;
+	padding:auto;
+	margin: 20px auto auto auto;
+	border: 2px solid #fff;
+	box-shadow: 0px 0px 10px #fff;
 }
-
-/* Nav Bar */
-#nav_bar {
-	width:100%;
-	-webkit-box-shadow: 0px 1px 3px #666666;
-	-moz-box-shadow: 0px 1px 3px #666666;
-	text-shadow: 1px 1px 3px #666666;
-	background:#0099CC;
-            }
-#nav_bar ul {
-	float:left;
-	width:100%;
-	padding:0;
-	margin:0;
-	list-style-type:none;
-	width:100%;
-	background-color:#000066;
-               }
-#nav_bar a {
-	float:left;
-	text-decoration:none;
-	color:white;
-	padding:0.2em 0.6em;
-	border-right:1px solid white;
-	font-family:"Arial";
-    height: 24px;
+#Login_wrapper
+{
+    width:900px;
+	min-height:940px;
+	padding:auto;
+	margin: 20px auto auto auto;
 }
-#nav_bar a:hover {
-	background-color:#ff3300;
-            }
-#nav_bar li {
-	display:inline;
-            }
  /*Container*/
-#container {
+#container 
+{
 	width: 900px;
-	height:auto;
-	padding: auto;
-	margin: auto;
+	height:704px;
+}
+#Container_Admin
+{
+    width:900px;
+    height:704px;
+    background-image:url("../Images/WorkArea-BG.png");
 }
 /*header*/
 #header {
 	height: 180px;
 	width: 900px;
 	background:url("../Images/header_logo.jpg");
-	background-position:center;
 }
+/* Nav Bar */
+#nav_bar {
+	width:900px;
+	height:25px;
+	background:#0099CC;
+}
+#nav_bar ul {
+	float:left;
+	padding:0;
+	margin:0;
+	list-style-type:none;
+	width:100%;
+	background-color:#006699;
+    height: 23px;
+}
+#nav_bar a {
+	float:left;
+	text-decoration:none;
+	color:white;
+	padding:0.2em 0.6em;
+	font-family:"Arial";
+
+    }
+#nav_bar a:hover 
+       {
+	background-color:#ff3300;
+      }
+#nav_bar li {
+	display:inline;
+            }
+#nav_bar asp:LinkButton 
+{
+    text-decoration:none;
+	color:white;
+	padding:0.2em 0.6em;
+	font-family:"Arial";
+	height:25px;
+}
+
 .Content_header
 {
-    width:auto;
+    width:557px;
     height:10px;
   
  
@@ -91,14 +107,27 @@
          margin-bottom:200px;
 		font: 14px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
         color: #fff;
-        background:url("../Images/bg1.jpg") opacity:0.5,
-       filter:Alpha(opacity=50);
-       
-        box-shadow:0px 0px 14px #808080;
+        background:url("../Images/bg1.jpg") opacity:0.4, alpha(opacity=40);
+        box-shadow:0px 0px 40px #fff;
         -moz-border-radius:5px;
 		-webkit-border-radius:5px;
 		border-radius:5px;
             }
+#LoginForm hover{
+		width: 360px;
+		height: 250px;
+		margin: 180px auto 0px auto;
+		font-family:"Arial";
+		font-size:14px;
+         margin-bottom:200px;
+		font: 14px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+        color: #fff;
+        background:url("../Images/bg1.jpg");
+        box-shadow:0px 0px 40px #fff;
+        -moz-border-radius:5px;
+		-webkit-border-radius:5px;
+		border-radius:5px;
+}
 #LoginForm label {
   float: left;
   width: 100px;
@@ -109,6 +138,7 @@
   letter-spacing: 1px;
   color:#fff;
 }
+   
 /*Textbox style for login*/
 .tb_login {
   padding: 0 10px;
@@ -146,6 +176,7 @@
 	padding: 0;
 	bottom:0;
 	width:100%;
+	color:Blue;
 	height:30px;			/* Height of the footer */
 	text-align:center;
 	position: relative;/* this gives IE6 hasLayout to properly clear */
@@ -155,48 +186,47 @@
 /*WorkArea*/
 .Working_Area 
 { float:right;
-    width:695px;
-	height:700px;  
-    border:2px #fff solid;
+    width:700px;
+	height:696px;  
     background-image:url("../Images/WorkArea-BG.png");
     padding:0;
     margin:0;
+ 
 }
 
 /*sidebar*/
 .Side_bar
  {
      float:left;
-	width: 200px;
-	height:700px;
-	float: left;
+	width: 198px;
+	height:696px;
 	padding:0;
 	margin:0;
+	border-right:2px #ccc dotted;
 	background-color:White;
 	font-family:Raavi;
 	}
 
 /*divider*/
 .divider{
-width:700px;
-height:0;
-margin-top: 2px;
-border-top: #999999 solid medium;
+    width:595px;
+    height:0;
+    margin-top: 2px;
+    border-top: #999999 solid medium;
 }
 
 /*Text Box Design*/
 .tb{
-background-color:#fff;
-border:2px solid #dbdbdb;
-padding:5px;
-width:auto;
--webkit-border-radius:7px;
--moz-border-radius:7px;
-color: #000;
-font-weight:bold;
-font-style:normal;
+    background-color:#fff;
+    border:2px solid #dbdbdb;
+    padding:5px;
+    -webkit-border-radius:7px;
+    -moz-border-radius:7px;
+    color: #000;
+    font-weight:bold;
+    font-style:normal;
 }
-}
+
 
 .button {
   font-family: Arial;
@@ -218,8 +248,7 @@ font-style:normal;
 .BlueButton{
 	padding:4px 4px 4px 4px;
 	color:white;
-    height:30px;
-	background-color:#0099CC;
+    background-color:#0099CC;
 	outline:none;
 	border:1px solid #989898;
 	font-weight:bold;
@@ -260,6 +289,19 @@ font-style:normal;
 {
     background: #fcfcfc url("../Images/grd_alt.png") repeat-x top;
 }
+.mGrid .pgr { background: #424242 url("../Images/grd_pgr.png") repeat-x top; } 
+.mGrid .pgr table { margin: 5px 0; } 
+.mGrid .pgr td { 
+border-width: 0; 
+padding: 0 6px; 
+border-left: solid 1px #666; 
+font-weight: bold; 
+color: #fff; 
+line-height: 12px; 
+} 
+.mGrid .pgr a { color: #666; text-decoration: none; } 
+.mGrid .pgr a:hover { color: #000; text-decoration: none; }
+
 .Actibutton {
   font-family: Arial;
   color: #4c5270;
@@ -272,14 +314,28 @@ font-style:normal;
   font-size: 11px;
   text-decoration: none;
 }
-
-/*MENU*/
+/*vertical_navigation*/
+#navigation {
+	width:164px;
+	margin:15px 0 0 12px;
+    border:4px solid #ccc;
+    border-radius:5px;
+}
+#navigation ul {
+	margin:0px;
+	padding:0px;
+}
+#navigation li {
+	list-style: none;
+} 
+/*vetical_images*/
 .nav_profile {
 	display:block;
 	background-attachment:relative;
 	background-image:url("../Images/navigation.png");
 	background-repeat:no-repeat;
-	width:165px;
+	background-position:0px 0px;
+	width:164px;
 	height:38px;
 }
 .nav_profile:hover{
@@ -291,7 +347,7 @@ font-style:normal;
 	background-image:url("../Images/navigation.png");
 	background-repeat:no-repeat;
 	background-position:0px -76px;
-	width:165;
+	width:164px;
 	height:38px;
 }
 .nav_time:hover{
@@ -303,7 +359,7 @@ font-style:normal;
 	background-image:url("../Images/navigation.png");
 	background-repeat:no-repeat;
 	background-position:0px -152px;
-	width:165;
+	width:164px;
 	height:38px;
 }
 .nav_earning:hover{
@@ -315,29 +371,52 @@ font-style:normal;
 	background-image:url("../Images/navigation.png");
 	background-repeat:no-repeat;
 	background-position:0px -228px;
-	width:165;
+	width:164px;
 	height:38px;
 }
 .nav_benefits:hover{
 	background-position:0px -266px;
 }
+/*new added icon for general manager*/
+.nav_accounts {
+	display:block;
+	background-attachment:relative;
+	background-image:url("../Images/navigation_gm.png");
+	background-repeat:no-repeat;
+	background-position:0px -152px;
+	width:164px;
+	height:38px;
+}
+.nav_accounts:hover{
+	background-position:0px -190px;
+}
+.nav_management {
+	display:block;
+	background-attachment:relative;
+	background-image:url("../Images/navigation_gm.png");
+	background-repeat:no-repeat;
+	background-position:0px -304px;
+	width:164px;
+	height:38px;
+}
+.nav_management:hover{
+	background-position:0px -342px;
+}
+.nav_history {
+	display:block;
+	background-attachment:relative;
+	background-image:url("../Images/navigation_gm.png");
+	background-repeat:no-repeat;
+	background-position:0px -380px;
+	width:164px;
+	height:38px;
+}
+.nav_history:hover{
+	background-position:0px -418px;
+}
 /*vertical sub menu*/
-#navigation {
-	width:165px;
-	height:155px;
-	margin: 50px 0 0 17.5px;
-	
-}
-#navigation ul {
-	margin:0px;
-	padding:0px;
-}
-#navigation li {
-	list-style: none;
-} 
-
 ul.top-level {
-	background:#666;
+	background: #09C;
 }
 ul.top-level li {
 	border-bottom: #fff solid;
@@ -353,7 +432,7 @@ ul.top-level li {
 	 line-height: 25px;
 	 text-indent: 10px;
 	 text-decoration:none;
-	 width:165px;
+	 width:164px;
 }
 #navigation a:hover{
 	text-decoration:underline;
@@ -368,7 +447,7 @@ ul.sub-level {
 }
 li:hover .sub-level {
     background: #999;
-    border: #fff solid;
+    border: 2px #fff solid;
     border-width: 1px;
     display: block;
     position: absolute;
@@ -378,5 +457,42 @@ li:hover .sub-level {
 ul.sub-level li {
     border: none;
     float:left;
-    width:165px;
+    width:164px;
+    background:#09C;
+}
+
+/*Third Level*/
+#navigation .sub-level .sub-level {
+    background: #09C;
+}
+/*RESET STYLES*/
+li:hover .sub-level .sub-level {
+	display:none;
+}
+.sub-level li:hover .sub-level {
+	display:block;
+}
+.panel
+{
+    position:absolute;
+    margin:auto;
+    border: 4px solid #B8B8B8;
+    background-color:White;
+    border-radius:4px;
+    top: 108px;
+    left:45px;
+    width:330px;
+}
+.bb
+{ 
+    position:absolute;
+    top:0%;
+    left:0%;
+    width:100%;
+    height:100%;
+    background-color:Black;
+    z-index:1001;
+    -moz-opacity:0.8;
+    opacity:40;
+    filter:alpha(opacity=80);
 }

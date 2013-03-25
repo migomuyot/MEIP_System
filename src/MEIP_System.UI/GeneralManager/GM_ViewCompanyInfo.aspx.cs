@@ -7,9 +7,9 @@ namespace MEIP_System.UI.GeneralManager
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            RequestViewCompanyInfo request = new RequestViewCompanyInfo();
-            request.Username = Session["Username"].ToString();
-            DataTable dt = DAT.ViewCompanyInfo(request);
+            RequestViewCompanyInfo requestViewCompanyInfo = new RequestViewCompanyInfo();
+            requestViewCompanyInfo.Username = Session["Username"].ToString();
+            DataTable dt = DAT.ViewCompanyInfo(requestViewCompanyInfo);
 
             if (dt.Rows.Count > 0)
             {

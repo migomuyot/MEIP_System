@@ -1,6 +1,9 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="MEIP_System.UI.Employee.Employee_ViewEducInfo" CodeFile="Employee_ViewEducInfo.aspx.cs" %>
 
-<!DOCTYPE html >
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
 <link href="../CSS/Style.css" rel="stylesheet" type="text/css" />
 <head>
     <title></title>
@@ -18,7 +21,8 @@
 				</ul>
 			</div><!--end of nav-->
     <div id="container">
-    <div class="Side_bar">  <div id="navigation">
+    <div class="Side_bar">
+      <div id="navigation">
 <ul>
    <li><a class="nav_profile" href="#"></a>
 	  <ul class="sub-level">
@@ -26,14 +30,21 @@
 		 <li><a href="Employee_ViewGovtInfo.aspx"><span>Government Related</span></a></li>
 		 <li><a href="Employee_ViewContactInfo.aspx"><span>Contact Information</span></a></li>
          <li><a href="Employee_ViewFamilyInfo.aspx"><span>Family Background</span></a></li>
-         <li><a href="Employee_ViewEducInfo.aspx"><span>Educational Background</span></a></li>
+         <li><a href="Employee_ViewEducInfo.aspx"><span>Education</span></a></li>
       </ul>
    </li>
-
-   <li><a class="nav_time" href="#"></a>
+    <li><a class="nav_time" href="#"></a>
 		<ul class="sub-level">
-         <li><span>Attendance</span></a></li>
-		 <li><a href="../EmployeeSelfService/EmployeeSelf_AddLeaveRequest.aspx"><span>Requests</span></a></li>
+        <li><a href="#"><span>Attendance</span></a></li>
+        <ul>
+		 <li><a href="#">Request</a>
+                   <ul class="sub-level">
+                        <li><a href="EmployeeSelf_EmployeeTimeChangeRequest.aspx"><span>Time Change</span></a></li>
+                        <li><a href="../EmployeeSelfService/EmployeeSelf_EmployeeLeaveRequest.aspx"><span>Leave Request</a></span></li>
+                    </ul>
+                </li>
+     
+     </ul>
 		 <li><a href='#'><span>Scehudule</span></a></li>
       </ul>
    </li>
@@ -49,17 +60,20 @@
 		 <li><a href='#'><span>Generate Benefits</span></a></li>
 		
       </ul>
+   
    </li>
 </ul>
-</div><!--end of navigation--></div><!--end of side bar (leftside)-->
+</div><!--end of navigation-->
+    </div><!--end of side bar (leftside)-->
     <div class="Working_Area">
     <br />
+    <div class="Content_Header"><img src="../Images/Educationalbackground.png" /></div>
     <center>
     <div class="divider"></div>
     </center>
     <br />
     <center>
-    <table>
+    <table  style="font-family: Arial, Helvetica, sans-serif;" cellspacing="0">
     <tr>
     <td>School:</td>
     <td><asp:Label ID="LabelGraduateSchool" runat="server" Text="Label"></asp:Label></td>

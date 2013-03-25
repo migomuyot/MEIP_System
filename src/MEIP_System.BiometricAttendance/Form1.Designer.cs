@@ -207,6 +207,7 @@
             this.lblTime.Text = "[ ]";
             this.lblTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblTime.Visible = false;
+            this.lblTime.Click += new System.EventHandler(this.lblTime_Click);
             // 
             // lblSaveSuccess
             // 

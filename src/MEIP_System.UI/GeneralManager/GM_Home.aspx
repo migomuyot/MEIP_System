@@ -1,6 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="MEIP_System.UI.GeneralManager.GM_Home" CodeFile="GM_Home.aspx.cs" %>
 
-<!DOCTYPE html >
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <link href="../CSS/Style.css" rel="stylesheet" type="text/css" />
 <head>
     <title></title>
@@ -8,7 +9,6 @@
 <body>
     <form id="form1" runat="server">
     <div id="wrapper">
-    <div class="borderline">
     <div id="header"></div>
         <div id="nav_bar">
 			 <ul>
@@ -20,18 +20,59 @@
 			</div><!--end of nav-->
     <div id="container">
     <div class="Side_bar">
-    
-    
+         <div id="navigation">
+<ul>
+   <li><a class="nav_profile" href="#"></a>
+	  <ul class="sub-level">
+		 <li><a href="GM_Home.aspx"><span>General Information</span></a></li>
+		 <li><a href="GM_ViewGovtInfo.aspx"><span>Government Related</span></a></li>
+		 <li><a href="GM_ViewContactInfo.aspx"><span>Contact Information</span></a></li>
+         <li><a href="GM_ViewFamilyInfo.aspx"><span>Family Background</span></a></li>
+         <li><a href="GM_EducationalInfo.aspx"><span>Education</span></a></li>
+      </ul>
+   </li>
+    <li><a class="nav_time" href="#"></a>
+		<ul class="sub-level">
+         <li><span>Attendance</span></li>
+		 <li><a href="../EmployeeSelfService/EmployeeSelf_GMVerifyRequest.aspx"><span>Requests</span></a></li>
+		 <li><a href="../Timekeeping/Timekeeping_AddTask.aspx"><span>Scehudule</span></a></li>
+          <li><span>Reports</span></a></li>
+      </ul>
+   </li>
+     <li><a class="nav_accounts" href="#"></a>
+		<ul class="sub-level">
+         <li><a href="GM_SearchEmployees.aspx"><span>Search Accounts</span></a></li>
+		 <li><a href="GM_AddUsers.aspx"><span>Add New Employee Profile</span></a></li>
+		
+      </ul>
+   </li>
+   <li><a class="nav_benefits" href="#"></a>
+		<ul class="sub-level">
+         <li><a href='#'><span>View Benefits</span></a></li>
+		 <li><a href='#'><span>Generate Benefits</span></a></li>
+		
+      </ul>
+      </li>
+ 
+ <li><a class="nav_management" href="#"></a>
+		<ul class="sub-level">
+         <li><a href='#'><span>Payroll </span></a></li>
+		 <li><a href="GM_ViewReports.aspx"><span>Reports</span></a></li>
+		
+      </ul>
+      </li>
+      </ul>
+    </div><!--end of navigation-->
+    </div><!--end of side bar (leftside)-->
+   <div class="Working_Area">
   
-</div><!--end of side bar (leftside)-->
-    <div class="Working_Area">
     <br />
-     <br />
+    <div class="Content_Header"><img src="../Images/ProfileInFormation.png" /></div>
     <center>
     <div class="divider"></div>
     </center>
     <center>
-    <table>
+    <table  style="font-family: Arial, Helvetica, sans-serif" cellspacing="0">
     <tr>
     <td></td>
     <td align="center">&nbsp;</td>
@@ -73,40 +114,16 @@
     <td></td>
     </tr>
     </table>
-    <br />
- PROFILE<br />
-    <a href="GM_Home.aspx">General Information</a><br />
-    <a href="GM_ViewCompanyInfo.aspx">Company Information</a><br />
-    <a href="GM_ViewFamilyInfo.aspx">Family Background</a><br />
-    <a href="GM_ViewGovtInfo.aspx">Government Numbers</a><br />
-    <a href="GM_ViewContactInfo.aspx">Contact Information</a> <br />
-    <a href="GM_ViewEducInfo.aspx">Educational Background</a> <br />
-    <a href="GM_ViewWorkExperience.aspx">Work Experience</a><br />
-TIME KEEPING<br />
-   <a href="#">Attendance</a><br />
-   <a href="../EmployeeSelfService/EmployeeSelf_GMVerifyRequest.aspx">Requests</a><br />
-   <a href="#">Schedule</a><br />
-   <a href="#">Reports</a><br />
-ACCOUNT<br />
-<a href="GM_SearchEmployees.aspx">Search Accounts</a><br />
- <a href="GM_AddUsers.aspx">Create New Account</a><br />
-   PAYROLL<br />
- <a href="#">View Payroll</a><br />
- <a href="#">Reports</a><br />
-BENEFITS<br />
-<a href="#">Generate Benefits</a><br />
- <a href="#">View Benefits</a> <br />
-  ADMINISTRATION<br />
-    <a href="GM_ViewAuditTrail.aspx">View Audit Trail</a><br />
-    <a href="GM_DeactivateAccount.aspx">Control Accounts</a><br />
     </center>
-     <center>
+    <br />
+      <center>
     <div class="divider"></div>
     </center>
+    
     </div><!--end of working area-->
     </div><!--end of container-->
-    </div>
     </div><!--end of wrapper-->
+
     </form>
 </body>
 </html>

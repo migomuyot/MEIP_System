@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using System.Data;
 
 namespace MEIP_System.UI.GeneralManager
@@ -12,32 +7,32 @@ namespace MEIP_System.UI.GeneralManager
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            RequestViewFamilyInfo request = new RequestViewFamilyInfo();
-            request.Username = Session["Username"].ToString();
-            DataTable dt = DAT.ViewFamilyInfo(request);
+            RequestViewFamilyInfo requestViewFamilyInfo = new RequestViewFamilyInfo();
+            requestViewFamilyInfo.Username = Session["Username"].ToString();
+            DataTable dt = DAT.ViewFamilyInfo(requestViewFamilyInfo);
             GridViewFamilyInfo.DataSource = dt;
             GridViewFamilyInfo.DataBind();
 
-            RequestViewSiblingInfo request2 = new RequestViewSiblingInfo();
-            request2.Username = Session["Username"].ToString();
-            DataTable dt2 = DAT.ViewSiblingInfo(request2);
+            RequestViewSiblingInfo requestViewSiblingInfo = new RequestViewSiblingInfo();
+            requestViewSiblingInfo.Username = Session["Username"].ToString();
+            DataTable dt2 = DAT.ViewSiblingInfo(requestViewSiblingInfo);
             GridViewSiblingInfo.DataSource = dt2;
             GridViewSiblingInfo.DataBind();
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            RequestUpdateFamilyInfo request = new RequestUpdateFamilyInfo();
-            request.Username = Session["Username"].ToString();
-            request.FamilyInfoID = int.Parse(txtFamilyInfoID.Text);
-            request.FatherFName = txtFatherFName.Text;
-            request.FatherLName = txtFatherLName.Text;
-            request.FatherContactNum = txtFatherCNum.Text;
-            request.MotherFName = txtMotherFName.Text;
-            request.MotherLName = txtMotherLName.Text;
-            request.MotherContactNum = txtMotherCNum.Text;
+            RequestUpdateFamilyInfo requestUpdateFamilyInfo = new RequestUpdateFamilyInfo();
+            requestUpdateFamilyInfo.Username = Session["Username"].ToString();
+            requestUpdateFamilyInfo.FamilyInfoID = int.Parse(txtFamilyInfoID.Text);
+            requestUpdateFamilyInfo.FatherFName = txtFatherFName.Text;
+            requestUpdateFamilyInfo.FatherLName = txtFatherLName.Text;
+            requestUpdateFamilyInfo.FatherContactNum = txtFatherCNum.Text;
+            requestUpdateFamilyInfo.MotherFName = txtMotherFName.Text;
+            requestUpdateFamilyInfo.MotherLName = txtMotherLName.Text;
+            requestUpdateFamilyInfo.MotherContactNum = txtMotherCNum.Text;
 
-            DAT.UpdateFamilyInfo(request);
+            DAT.UpdateFamilyInfo(requestUpdateFamilyInfo);
             Response.Write("<script language='javascript'>alert('Update Successful!.')</script>");
         }
 
@@ -62,26 +57,26 @@ namespace MEIP_System.UI.GeneralManager
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            RequestUpdateSiblingInfo request = new RequestUpdateSiblingInfo();
-            request.Username = Session["Username"].ToString();
-            request.SiblingID = int.Parse(txtSiblingID.Text);
-            request.SiblingFName = txtSiblingFName.Text;
-            request.SiblingLName = txtSiblingLName.Text;
-            request.SiblingContactNum = txtSiblingContactNum.Text;
+            RequestUpdateSiblingInfo requestUpdateSiblingInfo = new RequestUpdateSiblingInfo();
+            requestUpdateSiblingInfo.Username = Session["Username"].ToString();
+            requestUpdateSiblingInfo.SiblingID = int.Parse(txtSiblingID.Text);
+            requestUpdateSiblingInfo.SiblingFName = txtSiblingFName.Text;
+            requestUpdateSiblingInfo.SiblingLName = txtSiblingLName.Text;
+            requestUpdateSiblingInfo.SiblingContactNum = txtSiblingContactNum.Text;
 
-            DAT.UpdateSiblingInfo(request);
+            DAT.UpdateSiblingInfo(requestUpdateSiblingInfo);
             Response.Write("<script language='javascript'>alert('Update Successful!.')</script>");
         }
 
         protected void Button3_Click(object sender, EventArgs e)
         {
-            RequestAddSiblingInfo request = new RequestAddSiblingInfo();
-            request.Username = Session["Username"].ToString();
-            request.SiblingFName = txtSiblingFName.Text;
-            request.SiblingLName = txtSiblingLName.Text;
-            request.SiblingContactNum = txtSiblingContactNum.Text;
+            RequestAddSiblingInfo requestAddSibling = new RequestAddSiblingInfo();
+            requestAddSibling.Username = Session["Username"].ToString();
+            requestAddSibling.SiblingFName = txtSiblingFName.Text;
+            requestAddSibling.SiblingLName = txtSiblingLName.Text;
+            requestAddSibling.SiblingContactNum = txtSiblingContactNum.Text;
 
-            DAT.AddSiblingInfo(request);
+            DAT.AddSiblingInfo(requestAddSibling);
             Response.Write("<script language='javascript'>alert('Added Successful!.')</script>");
         }
         protected void LinkButton1_Click(object sender, EventArgs e)

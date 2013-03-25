@@ -7,9 +7,9 @@ namespace MEIP_System.UI.GeneralManager
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            RequestViewGeneralInfo request = new RequestViewGeneralInfo();
-            request.Username = Session["Username"].ToString();
-            DataTable dt = DAT.ViewGeneralInfo(request);
+            RequestViewGeneralInfo requestViewGeneralInfo = new RequestViewGeneralInfo();
+            requestViewGeneralInfo.Username = Session["Username"].ToString();
+            DataTable dt = DAT.ViewGeneralInfo(requestViewGeneralInfo);
 
             LabelFName.Text = dt.Rows[0]["FName"].ToString();
             LabelLName.Text = dt.Rows[0]["LName"].ToString();
@@ -23,5 +23,5 @@ namespace MEIP_System.UI.GeneralManager
         {
             Response.Redirect("../Login.aspx");
         }
-    }
+}
 }

@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using System.Data;
+using System.Web.UI.WebControls;
 
 namespace MEIP_System.UI.GeneralManager
 {
@@ -17,9 +13,9 @@ namespace MEIP_System.UI.GeneralManager
 
         protected void btnSearchEmployee_Click(object sender, EventArgs e)
         {
-            RequestSearchEmployees RequestSearch = new RequestSearchEmployees();
-            RequestSearch.LName = txtSearchEmployee.Text;
-            DataTable dt = DAT.SearchEmployees(RequestSearch);
+            RequestSearchEmployees requestSearch = new RequestSearchEmployees();
+            requestSearch.LName = txtSearchEmployee.Text;
+            DataTable dt = DAT.SearchEmployees(requestSearch);
             grdSearchEmployee.DataSource = dt;
             grdSearchEmployee.DataBind();
         }
@@ -34,5 +30,9 @@ namespace MEIP_System.UI.GeneralManager
         {
 
         }
-    }
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Login.aspx");
+        }
+}
 }

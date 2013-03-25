@@ -35,7 +35,7 @@ namespace MEIP_System.BiometricAttendance
             object nullObject = 0;
             bool nullBool = true;
 
-            
+
             {
                 DataTable dt = DAT_Biometric.ViewFingerPrintTemplate();
 
@@ -89,7 +89,7 @@ namespace MEIP_System.BiometricAttendance
                         //      a userStatus to know if the user is in or out
                         //      when creating a new user make the userStatus Out
                         string userStatus = DAT_Biometric.GetUserStatus(userID);
-                        
+
                         current = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second);
 
                         if (userStatus == "Out")
@@ -151,6 +151,11 @@ namespace MEIP_System.BiometricAttendance
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTime_Click(object sender, EventArgs e)
         {
 
         }

@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using System.Data;
 
 namespace MEIP_System.UI.EmployeeSelfService
@@ -55,6 +50,10 @@ namespace MEIP_System.UI.EmployeeSelfService
             txtTimeChangeOut.Text = GridViewAllRequests.SelectedRow.Cells[8].Text;
             txtLeaveType.Text = GridViewAllRequests.SelectedRow.Cells[2].Text;
             txtReason.Text = GridViewAllRequests.SelectedRow.Cells[11].Text;
+        }
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Login.aspx");
         }
 }
 }

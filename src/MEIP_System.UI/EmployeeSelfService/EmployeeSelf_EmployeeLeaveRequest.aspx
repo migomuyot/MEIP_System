@@ -13,17 +13,67 @@
 			 <ul>
 				<li><a href="#">Home</a></li>
 				<li><a href="#">Need Help</a></li>
-               <%--<li style="float:right;"><asp:LinkButton ID="LinkButton1" runat="server" 
-                       onclick="LinkButton1_Click">LOGOUT</asp:LinkButton></li>--%>
+              <li style="float:right;"><asp:LinkButton ID="LinkButton1" runat="server" 
+                       onclick="LinkButton1_Click">LOGOUT</asp:LinkButton></li>
 				</ul>
 			</div><!--end of nav-->
             <div id="container">
-    <div class="Side_bar"></div><!--end of side bar (leftside)-->
+    <div class="Side_bar">
+           <div id="navigation">
+<ul>
+   <li><a class="nav_profile" href="#"></a>
+	  <ul class="sub-level">
+		 <li><a href="../Employee/Employee_Home.aspx"><span>General Information</span></a></li>
+		 <li><a href="../Employee/Employee_ViewGovtInfo.aspx"<span>Government Related</span></a></li>
+		 <li><a href="../Employee/Employee_ViewContactInfo.aspx"><span>Contact Information</span></a></li>
+         <li><a href="../Employee/Employee_ViewFamilyInfo.aspx"><span>Family Background</span></a></li>
+         <li><a href="../Employee/Employee_ViewEducInfo.aspx"><span>Education</span></a></li>
+      </ul>
+   </li>
+    <li><a class="nav_time" href="#"></a>
+		<ul class="sub-level">
+        <li><a href="#"><span>Attendance</span></a></li>
+        <ul>
+		 <li><a href="#">Request</a>
+                    <ul class="sub-level">
+                        <li><a href="../EmployeeSelf_EmployeeTimeChangeRequest.aspx"><span>Time Change</span></a></li>
+                        <li><a href="../EmployeeSelfService/EmployeeSelf_EmployeeLeaveRequest.aspx">Leave Request</a></li>
+                    </ul>
+                </li>
+          </ul>
+		 <li><a href='#'><span>Scehudule</span></a></li>
+      </ul>
+   </li>
+   <li><a class="nav_earning" href="#"></a>
+		<ul class="sub-level">
+         <li><a href='#'><span>Payroll</span></a></li>
+
+      </ul>
+   </li>
+   <li><a class="nav_benefits" href="#"></a>
+		<ul class="sub-level">
+         <li><a href='#'><span>View Benefits</span></a></li>
+		 <li><a href='#'><span>Generate Benefits</span></a></li>
+		
+      </ul>
+   
+   </li>
+</ul>
+</div><!--end of navigation-->
+    </div><!--end of side bar (leftside)-->
     <div class="Working_Area">
+    <div style="height:700px; overflow:auto;" >
     <br />
     <center>
         <asp:GridView ID="GridView1" runat="server" 
-            onselectedindexchanged="GridView1_SelectedIndexChanged1">
+            onselectedindexchanged="GridView1_SelectedIndexChanged1" GridLines="None"    
+                            CssClass="mGrid"  
+                            PagerStyle-CssClass="pgr"  
+                            AlternatingRowStyle-CssClass="alt">
+                    <AlternatingRowStyle CssClass="alt" />
+                    <PagerSettings FirstPageText="&lt;&lt;" LastPageText="&gt;&gt;" 
+                        NextPageText="&gt;" PreviousPageText="&lt;" />
+                    <PagerStyle CssClass="pgr" />
             <Columns>
                 <asp:CommandField ShowSelectButton="True" />  
             </Columns>
@@ -77,28 +127,24 @@
         </tr>
         </table>
         <br />
-        <asp:Button ID="Button2" runat="server" Text="Update Request" 
-            onclick="Button2_Click" Width="153px" />
-            <br />
-        <br />
-        <asp:Button ID="Button4" runat="server" onclick="Button4_Click" 
+        <asp:Button ID="Button4" CssClass="BlueButton" runat="server" onclick="Button4_Click" 
             Text="Add New Request" />
             <br />
+            <br />
+        <asp:Button ID="Button2" CssClass="BlueButton" runat="server" Text="Update Request" 
+            onclick="Button2_Click" Width="157px" />
+            <br />
         <br />
-&nbsp;<asp:Button ID="Button3" runat="server" Text="Back" onclick="Button3_Click" />
+&nbsp;<asp:Button ID="Button3" CssClass="BlueButton" runat="server" Text="Back" onclick="Button3_Click" />
             </center>
          <center>
     <div class="divider"></div>
     </center>
-    
+    </div>
     </div><!--end of working area-->
     </div><!--end of container-->
     </div><!--end of wrapper-->
 
-
-    </form>
-</body>
-</html>
 
     </form>
 </body>

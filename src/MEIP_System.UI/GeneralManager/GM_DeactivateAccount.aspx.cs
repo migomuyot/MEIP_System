@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using System.Data;
 
 namespace MEIP_System.UI.GeneralManager
@@ -21,7 +16,6 @@ namespace MEIP_System.UI.GeneralManager
         {
             RequestDeactivateAccount requestDeactivate = new RequestDeactivateAccount();
             requestDeactivate.UserID = int.Parse(txtID.Text);
-            requestDeactivate.Username = Session["Username"].ToString();
             DataTable dt = DAT.DeactivateAccount(requestDeactivate);
 
             DataTable UpdateGrid = DAT.ViewUsers();
@@ -42,7 +36,6 @@ namespace MEIP_System.UI.GeneralManager
         {
             RequestActivateAccount requestActivate = new RequestActivateAccount();
             requestActivate.UserID = int.Parse(txtID.Text);
-            requestActivate.Username = Session["Username"].ToString();
             DataTable dt = DAT.ActivateAccount(requestActivate);
 
             DataTable UpdateGrid = DAT.ViewUsers();

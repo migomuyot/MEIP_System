@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using System.Data;
 
 namespace MEIP_System.UI.GeneralManager
@@ -12,9 +7,9 @@ namespace MEIP_System.UI.GeneralManager
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            RequestViewGovtInfo request = new RequestViewGovtInfo();
-            request.Username = Session["Username"].ToString();
-            DataTable dt = DAT.ViewGovtInfo(request);
+            RequestViewGovtInfo requestViewGovtInfo = new RequestViewGovtInfo();
+            requestViewGovtInfo.Username = Session["Username"].ToString();
+            DataTable dt = DAT.ViewGovtInfo(requestViewGovtInfo);
 
             if (dt.Rows.Count > 0)
             {

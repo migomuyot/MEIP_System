@@ -23,12 +23,6 @@ namespace MEIP_System
             DAT.AuditTrail(requestaudit);
             da.Fill(dt);
             return dt;
-            //DataTable dt = new DataTable();
-            //SqlDataAdapter da = new SqlDataAdapter("SP_LoginUser '" + request.Username + "', '" + request.Password + "'", cs);
-            //RequestAuditTrail requestaudit = new RequestAuditTrail(request.Username, "LoggedIn");
-            //DAT.AuditTrail(requestaudit);
-            //da.Fill(dt);
-            //return dt;
         }
         #endregion
 
@@ -52,10 +46,6 @@ namespace MEIP_System
             DAT.AuditTrail(requestaudit);
             da.Fill(dt);
             return dt;
-            //DataTable dt = new DataTable();
-            //SqlDataAdapter da = new SqlDataAdapter("SP_AddEmployee '" + request.UsertypeID + "','" + request.LName + "','" + request.FName + "','" + request.MName + "','" + request.Nickname + "','" + request.DOB + "','" + request.CivilStatus + "','" + request.Gender + "','" + request.Username + "','" + request.Password + "','" + request.DateTimeAdded + "','" + request.AccountStatus + "','" + request.UserStatus +  "'", cs);
-            //RequestAuditTrail requestaudit = new RequestAuditTrail(request.Username, "Added User");
-            //DAT.AuditTrail(requestaudit);
         }
 
         public static DataTable ViewUsers()
@@ -90,13 +80,6 @@ namespace MEIP_System
         #endregion
 
         #region Add Information
-        //public static void AddContactInfo(RequestAddContactInfo request)
-        //{
-        //    string cs = "SERVER =localhost; DATABASE=EmployeePortal; Integrated Security=true;";
-        //    DataTable dt = new DataTable();
-        //    SqlDataAdapter da = new SqlDataAdapter("SP_AddContactInfo '" + request.Username + "','" + request.HomeNum + "','" + request.CellphoneNum + "','" + request.HomeAddress + "','" + request.Email + "'", cs);
-        //    da.Fill(dt);
-        //}
 
         public static void AddWorkExperience(RequestAddWorkExperience request)
         {
@@ -108,11 +91,21 @@ namespace MEIP_System
             
             da.Fill(dt);
         }
+       
         public static void AddSiblingInfo(RequestAddSiblingInfo request)
         {
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter("SP_AddSiblingInfo '" + request.Username + "','" + request.SiblingLName + "','" + request.SiblingFName + "','" + request.SiblingContactNum + "'", cs);
             RequestAuditTrail requestaudit = new RequestAuditTrail(request.Username, "Added New Sibling Information");
+            DAT.AuditTrail(requestaudit);
+            da.Fill(dt);
+        }
+
+        public static void AddEducInfo(RequestAddEducInfo request)
+        {
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter("SP_AddEducInfo '" + request.Username + "','" + request.School + "','" + request.Degree + "','" + request.Course + "','" + request.YearGraduated + "'", cs);
+            RequestAuditTrail requestaudit = new RequestAuditTrail(request.Username, "Added School");
             DAT.AuditTrail(requestaudit);
             da.Fill(dt);
         }
@@ -212,6 +205,24 @@ namespace MEIP_System
 
         #endregion
 
+        #region Reports
+        public static DataTable UserList()
+        {
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter("UserList ", cs);
+            da.Fill(dt);
+            return dt;
+        }
+
+        public static DataTable DailyTimeReport(RequestDailyTimeReport request)
+        {
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter("SP_DailyTimeReport " + request, cs);
+            da.Fill(dt);
+            return dt;
+        }
+        #endregion
+
         #region Update
         public static void UpdateContactInfo(RequestUpdateContactInfo request)
         {
@@ -225,7 +236,7 @@ namespace MEIP_System
         public static void UpdateEducInfo(RequestUpdateEducationalInfo request)
         {
             DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("SP_UpdateEducInfo '" + request.Username + "','" + request.GraduateSchool + "','" + request.CourseTaken + "'," + request.YearGraduated + "", cs);
+            SqlDataAdapter da = new SqlDataAdapter("SP_UpdateEducInfo '" + request.EducInfoID + "','" + request.Username + "','" + request.School + "','" + request.Degree + "','" + request.Course + "','" + request.YearGraduated + "'", cs);
             RequestAuditTrail requestaudit = new RequestAuditTrail(request.Username, "Updated Educational Information");
             DAT.AuditTrail(requestaudit);
             da.Fill(dt);
@@ -302,6 +313,28 @@ namespace MEIP_System
         #endregion
 
         #region Requests
+
+        public static DataTable ViewAllRequest()
+        {
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter("SP_ViewAllRequest ", cs);
+            //RequestAuditTrail requestaudit = new RequestAuditTrail(request.Username, "Viewed All Request");
+            //DAT.AuditTrail(requestaudit);
+            da.Fill(dt);
+            return dt;
+        }
+
+        public static void VerifyRequest(RequestVerifyRequests request)
+        {
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter("SP_VerifyRequests '" + request.RequestID + "','" + request.UserID + "','" + request.Status + "','" + request.Remarks + "'", cs);
+            RequestAuditTrail requestaudit = new RequestAuditTrail(request.Username, "Verified Request");
+            DAT.AuditTrail(requestaudit);
+
+            da.Fill(dt);
+        }
+
+        #region Leaves
         public static void LeaveRequest(RequestLeaveRequest request)
         {
             DataTable dt = new DataTable();
@@ -329,26 +362,38 @@ namespace MEIP_System
             DAT.AuditTrail(requestaudit);
             da.Fill(dt);
         }
+        #endregion
 
-        public static DataTable ViewAllRequest()
+        #region Time Change
+        public static DataTable ViewTimeChangeRequest(RequestViewTimeChangeRequest request)
         {
             DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("SP_ViewAllRequest ", cs);
-            //RequestAuditTrail requestaudit = new RequestAuditTrail(request.Username, "Viewed All Request");
-            //DAT.AuditTrail(requestaudit);
+            SqlDataAdapter da = new SqlDataAdapter("SP_ViewTimeChangeRequest '" + request.Username + "'", cs);
+            RequestAuditTrail requestaudit = new RequestAuditTrail(request.Username, "Viewed Time Change Request");
+            DAT.AuditTrail(requestaudit);
             da.Fill(dt);
             return dt;
         }
 
-        public static void VerifyRequest(RequestVerifyRequests request)
+        public static void TimeChangeRequest(RequestTimeChangeRequest request)
         {
             DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("SP_VerifyRequests '" +  request.RequestID + "','" + request.UserID + "','" + request.Status + "','" + request.Remarks + "'", cs);
-            RequestAuditTrail requestaudit = new RequestAuditTrail(request.Username, "Verified Request");
+            SqlDataAdapter da = new SqlDataAdapter("SP_TimeChangeRequest '" + request.Username + "','" + request.RequestType + "','" + request.DateApplied + "','" + request.AttendanceDateChange + "','" + request.TimeInChange + "','" + request.TimeOutChange + "','" + request.Reason + "'", cs);
+            RequestAuditTrail requestaudit = new RequestAuditTrail(request.Username, "Applied for Time Change Request");
             DAT.AuditTrail(requestaudit);
-            
             da.Fill(dt);
         }
+
+        public static void UpdateTimeChangeRequest(RequestUpdateTimeChangeRequest request)
+        {
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter("SP_UpdateTimeChangeRequest '" + request.RequestID + "','" + request.Username + "','" + request.DateApplied + "','" + request.AttendanceDateChange + "','" + request.TimeChangeIn + "','" + request.TimeChangeOut + "','" + request.Reason + "'", cs);
+            RequestAuditTrail requestaudit = new RequestAuditTrail(request.Username, "Updated Time Change Request");
+            DAT.AuditTrail(requestaudit);
+            da.Fill(dt);
+        }
+        #endregion
+
         #endregion
 
         #region Encryption
@@ -363,6 +408,113 @@ namespace MEIP_System
             SHA512 = Convert.ToBase64String(hash3.Hash);
 
             return SHA512;
+        }
+        #endregion
+
+        #region Timekeeping
+        public static DataTable RetrieveDTR(RequestRetrieveAttendanceRecords request)
+        {
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter("SP_DailyTimeReport '" + request.Username + "'", cs);
+            da.Fill(dt);
+            return dt;
+        }
+
+        #region Tasks
+        public static DataTable AddTask(RequestAddTask request)
+        {
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter("SP_AddTask '" + request.UserID + "','" +
+            request.Task + "','" + request.TaskDate + "'", cs);
+            da.Fill(dt);
+            return dt;
+        }
+
+        public static DataTable UpdateTask(RequestUpdateTask request)
+        {
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter("SP_UpdateTask '" + request.NotifID + "','" +
+            request.UserID + "','" + request.Task + "','" + request.TaskDate + "'", cs);
+            da.Fill(dt);
+            return dt;
+        }
+
+        public static DataTable ViewTask()
+        {
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter("SP_ViewTask ", cs);
+            da.Fill(dt);
+            return dt;
+        }
+        #endregion
+        #endregion
+
+        #region Payroll
+        public static DataTable ComputePayroll(RequestComputePayroll request)
+        {
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter("SP_ComputePayroll '" +
+                request.UserID + "','" +
+                request.BasicPay + "','" +
+                request.DailyRate + "','" +
+                request.WorkingHrs + "','" +
+                request.PerHrRate + "','" +
+                request.NoofMinuteLate + "','" +
+                request.LateDeductions + "','" +
+                request.NoDaysAbsent + "','" +
+                request.AbsentDeductions + "','" +
+                request.NoofMinuteUndertime + "','" +
+                request.UndertimeDeductions + "','" +
+                request.NightDifferentialHrs + "','" +
+                request.TotalNightDifferential + "','" +
+                request.NightDifferential + "','" +
+                request.TransportAllowance + "','" +
+                request.MealAllowance + "','" +
+                request.Ricesubsidy + "','" +
+                request.Laundry + "','" +
+                request.HolidayPay + "','" +
+                request.Bonus + "','" +
+                request.MonthlyIncentive + "','" +
+                request.GrossPay + "','" +
+                request.TaxSSS + "','" +
+                request.SSSContribution + "','" +
+                request.SSSTotalContribution + "','" +
+                request.TaxPhilHealth + "','" +
+                request.PhilHealthContribution + "','" +
+                request.PhilHealthTotalContribution + "','" +
+                request.TaxSSSLoan + "','" +
+                request.TaxHDMF + "','" +
+                request.HDMFContribution + "','" +
+                request.HDMFTotalContribution + "','" +
+                request.TaxPagibigLoan + "','" +
+                request.WithHoldTax + "','" +
+                request.PayrollDate + "','" +
+                request.NetPay + "'", cs);
+            da.Fill(dt);
+            return dt;
+        }
+
+        public static DataTable GetCompensation(RequestGetCompensation request)
+        {
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter("SP_GetEmployeeCompensation '" + request.UserID + "'", cs);
+            da.Fill(dt);
+            return dt;
+        }
+
+        public static void RegisterEmployeeCompensation(RequestAddEmployeeCompensation request)
+        {
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter("SP_RegisterEmployeeCompensation'" + request.UserID + "','" + request.BasicPay + "'", cs);
+            da.Fill(dt);
+        }
+
+        public static string GetCivilStatus(string UserID)
+        {
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter("Select CivilStatus From tblUsers where UserID='" + UserID + "'", cs);
+            da.Fill(dt);
+            return dt.Rows[0][0].ToString();
         }
         #endregion
     }

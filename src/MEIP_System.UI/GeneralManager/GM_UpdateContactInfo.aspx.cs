@@ -7,8 +7,8 @@ namespace MEIP_System.UI.GeneralManager
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            RequestViewContactInfo request = new RequestViewContactInfo(Session["Username"].ToString());
-            DataTable dt = DAT.ViewContactInfo(request);
+            RequestViewContactInfo requestViewContactInfo = new RequestViewContactInfo(Session["Username"].ToString());
+            DataTable dt = DAT.ViewContactInfo(requestViewContactInfo);
 
             if (!IsPostBack)
             {
@@ -30,16 +30,16 @@ namespace MEIP_System.UI.GeneralManager
         protected void ButtonUpdateContactInfo_Click(object sender, EventArgs e)
         {
 
-            RequestUpdateContactInfo request = new RequestUpdateContactInfo();
-            request.Username = Session["Username"].ToString();
-            request.HomeNum = txtHomeNum.Text;
-            request.CellphoneNum = txtCellphoneNum.Text;
-            request.HomeAddress = txtHomeAddress.Text;
-            request.Email = txtEmail.Text;
+            RequestUpdateContactInfo requestUpdateContactInfo = new RequestUpdateContactInfo();
+            requestUpdateContactInfo.Username = Session["Username"].ToString();
+            requestUpdateContactInfo.HomeNum = txtHomeNum.Text;
+            requestUpdateContactInfo.CellphoneNum = txtCellphoneNum.Text;
+            requestUpdateContactInfo.HomeAddress = txtHomeAddress.Text;
+            requestUpdateContactInfo.Email = txtEmail.Text;
 
             try
             {
-                DAT.UpdateContactInfo(request);
+                DAT.UpdateContactInfo(requestUpdateContactInfo);
                 Response.Write("<script language='javascript'>alert('Update Successful!.')</script>");
                 Response.Redirect("GM_ViewContactInfo.aspx");
             }

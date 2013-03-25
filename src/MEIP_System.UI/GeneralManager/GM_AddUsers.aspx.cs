@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using System.Data;
 
 namespace MEIP_System.UI.GeneralManager
@@ -12,27 +7,27 @@ namespace MEIP_System.UI.GeneralManager
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //DataTable dt = DAT.ViewUsers();
-            //GridViewAddEmployee.DataSource = dt;
+            DataTable dt = DAT.ViewUsers();
+            GridViewAddEmployee.DataSource = dt;
             GridViewAddEmployee.DataBind();
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            RequestAddUser request = new RequestAddUser();
-            request.LName = txtLName.Text;
-            request.FName = txtFName.Text;
-            request.Nickname = txtNickname.Text;
-            request.MName = txtMName.Text;
-            request.DOB = CalendarDOB.SelectedDate.ToString();
-            request.CivilStatus = DropDownListCivilStatus.Text;
-            request.Gender = DropDownListGender.Text;
-            request.Username = txtUsername.Text;
-            request.Password = txtPassword.Text;
-            
+            RequestAddUser requestAddUser = new RequestAddUser();
+            requestAddUser.LName = txtLName.Text;
+            requestAddUser.FName = txtFName.Text;
+            requestAddUser.Nickname = txtNickname.Text;
+            requestAddUser.MName = txtMName.Text;
+            requestAddUser.DOB = CalendarDOB.SelectedDate.ToString();
+            requestAddUser.CivilStatus = DropDownListCivilStatus.Text;
+            requestAddUser.Gender = DropDownListGender.Text;
+            requestAddUser.Username = txtUsername.Text;
+            requestAddUser.Password = txtPassword.Text;
+
             try
             {
-                DAT.AddUser(request);
+                DAT.AddUser(requestAddUser);
             }
             catch
             {
@@ -44,9 +39,15 @@ namespace MEIP_System.UI.GeneralManager
         {
             Response.Redirect("GM_Home.aspx");
         }
+
         protected void LinkButton1_Click(object sender, EventArgs e)
         {
             Response.Redirect("../Login.aspx");
+        }
+
+        protected void CalendarDOB_SelectionChanged(object sender, EventArgs e)
+        {
+
         }
 }
 }
